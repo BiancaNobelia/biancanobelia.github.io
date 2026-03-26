@@ -22,6 +22,11 @@ permalink: /projects/
         <div class="project-card" data-tags="{{ project.tags | join: ',' | downcase }}">
             {% if project.cover_image %}
             <div class="project-card-image">
+                {% if project.project_type %}
+                    <span class="type-badge type-{{ project.project_type }}">
+                    {% if project.project_type == "full-time" %}Full-time{% elsif project.project_type == "internship" %}Internship{% else %}Research{% endif %}
+                    </span>
+                {% endif %}
                 <a href="{{ project.url | relative_url }}">
                     <img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}">
                 </a>
@@ -32,10 +37,6 @@ permalink: /projects/
                 <h3>
                     <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
                 </h3>
-
-                {% if project.project_type %}
-                    <span class="badge badge-{{ project.project_type }}">{{ project.project_type }}</span>
-                {% endif %}
                 
                 {% if project.description %}
                 <p class="project-description">{{ project.description }}</p>
