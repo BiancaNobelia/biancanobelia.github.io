@@ -13,7 +13,7 @@ date: 2023-08-01
 
 This project is a **semi-automatic winding machine** designed to combine two production processes—**winding** and **insulation stripping**—to increase production output and reduce labor costs. The system integrates servo motion control and pneumatic actuation, supported by an HMI for operator control and parameter configuration.
 
-![Winding Machine](/pictures/projects/winding-machine/winding_cover.png)
+![Winding Machine](/pictures/winding.jpg)
 
 ## System Description
 
