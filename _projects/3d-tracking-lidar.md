@@ -13,7 +13,7 @@ date: 2023-05-01
 
 This AGV autonomously transports materials from the warehouse to the production area. The system is designed for efficient operation and safety in an indoor logistics environment.
 
-<img src="/pictures/agv.png" alt="AGV" style="width:60%; max-width:520px; height:auto;">
+<img src="/pictures/agv.png" alt="AGV" style="width:20%; max-width:520px; height:auto;">
 
 ## System Description
 
@@ -62,7 +62,7 @@ This interface allows the operator to quickly set the target station without nee
 - **3D-printed mounting bracket for the NFC module**, ensuring stable alignment and reliable tag reading
 - **Panel design** to house the interface components and wiring organization
 
-<img src="/pictures/agv_circuit.jpg" alt="AGV" style="width:60%; max-width:520px; height:auto;">
+<img src="/pictures/agv_circuit.jpg" alt="AGV" style="width:20%; max-width:520px; height:auto;">
 
 ## Control & Tuning
 
