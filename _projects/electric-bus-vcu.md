@@ -4,6 +4,7 @@ description: Developed an HMI-based monitoring and operation interface for an EV
 cover_image: /pictures/ev_bus.png
 tags: [HMI, EV Charger, Monitoring, Industrial Automation, Schneider, Beijer Electronics, UI Design]
 featured: true
+project_type: internship
 demo_url: https://drive.google.com/file/d/1vjVBOgTVrI5Ibc4cHMgSGH2soXayvMAt/view?usp=sharing
 repo_url:
 date: 2022-07-01
@@ -33,7 +34,9 @@ A communication program was implemented between the **EV charger controller** an
 HMI screens were designed and implemented for:
 
 - HMIGXU5512 (Schneider Electric)
+<img src="/pictures/hmi2.jpg" style="width:50%; max-width:520px; height:auto;">
 - X2 Base 7 (Beijer Electronics)
+<img src="/pictures/hmi.jpg" style="width:50%; max-width:520px; height:auto;">
 
 ## Jobdesk / Contributions
 
@@ -42,10 +45,10 @@ HMI screens were designed and implemented for:
 - Designed and integrated HMI screens for **HMIGXU5512** and **X2 Base 7**.
 - Successfully verified data transmission (send/receive) between controller and HMI.
 
-## Design Implementation
+## Documentations
 
-![HMIGXU5512 Screen](/pictures/hmi2.png)
-
-![X2 Base 7 Screen](/pictures/hmi.png)
+<img src="/pictures/ev_bus2.jpg" style="width:50%; max-width:520px; height:auto;">
+<img src="/pictures/hmi.jpg" style="width:50%; max-width:520px; height:auto;">
+<img src="/pictures/ev_bus3.jpg" style="width:50%; max-width:520px; height:auto;">
 
 ## Video Demo

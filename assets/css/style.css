@@ -364,6 +364,37 @@ a:hover {
     font-weight: 500;
 }
 
+.badge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  font-size:12px;
+  margin:6px 0 0;
+}
+
+/* default */
+.badge{ color: var(--muted); background: transparent; }
+
+/* per type */
+.badge-full-time{
+  border-color: #2dd4bf33;
+  background:   #2dd4bf1a;
+  color:        #5eead4;
+}
+
+.badge-internship{
+  border-color: #60a5fa33;
+  background:   #60a5fa1a;
+  color:        #93c5fd;
+}
+
+.badge-study{
+  border-color: #f59e0b33;
+  background:   #f59e0b1a;
+  color:        #fbbf24;
+}
+
 .project-card-footer {
     margin-top: 1rem;
 }

@@ -4,6 +4,7 @@ description: Semi-automatic machine that combines winding and insulation strippi
 cover_image: /pictures/winding.jpg
 tags: [Automation Winding, Insulation Stripping, Pneumatic, Servo Drive, Double Acting Cylinder, HMI]
 featured: true
+project_type: full-time
 demo_url: https://drive.google.com/file/d/1VqkIWIbYmHRotvpB-isZLK6dTZoTA6W-/view?usp=drive_link
 repo_url:
 date: 2023-08-01

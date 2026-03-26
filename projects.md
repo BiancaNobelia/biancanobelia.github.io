@@ -32,6 +32,10 @@ permalink: /projects/
                 <h3>
                     <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
                 </h3>
+
+                {% if project.project_type %}
+                    <span class="badge badge-{{ project.project_type }}">{{ project.project_type }}</span>
+                {% endif %}
                 
                 {% if project.description %}
                 <p class="project-description">{{ project.description }}</p>
