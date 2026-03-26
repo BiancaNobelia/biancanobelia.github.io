@@ -13,7 +13,7 @@ date: 2023-08-01
 
 This project is a **semi-automatic winding machine** designed to combine two production processes—**winding** and **insulation stripping**—to increase production output and reduce labor costs. The system integrates servo motion control and pneumatic actuation, supported by an HMI for operator control and parameter configuration.
 
-![Winding Machine](/pictures/winding.jpg)
+<img src="/pictures/winding.jpg" style="width:50%; max-width:520px; height:auto;">
 
 ## System Description
 
@@ -32,7 +32,7 @@ A **Weintek HMI** is used for user operation and monitoring. Communication betwe
 - **RS232 / RS485 communication** (servo drive ↔ HMI communication)
 - Electrical control panel (wiring, protection, and integration)
 
-![Control Panel](/pictures/winding_circuit.jpg)
+<img src="/pictures/winding_circuit.jpg" alt="AGV" style="width:50%; max-width:520px; height:auto;">
 
 ## Jobdesk / Contributions
 
