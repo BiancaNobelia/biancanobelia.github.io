@@ -1,0 +1,39 @@
+# Site settings
+title: Teuku Zikri Fatahillah
+email: teukuzikrifatahillah@gmail.com
+description: >-
+  A highly motivated robotics engineer with expertise in Embedded Systems, 
+  Computer Vision, Electronics Design, ROS/ROS2, and FPGA development.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://tzf230201.github.io" # your site URL
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
