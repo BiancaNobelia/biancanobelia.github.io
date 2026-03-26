@@ -1,174 +1,109 @@
 ---
-title: 3D Tracking Lidar System
-description: 3D scanning and tracking system using 2D Lidar mounted on Dynamixel servo for robotics perception with ROS and PointCloud processing.
-cover_image: /assets/images/projects/3d_lidar_1.png
-tags: [Lidar, ROS, PCL, 3D Scan, Perception, Robotics]
-featured: false
-demo_url: 
+title: Automatic Guided Vehicle (AGV)
+description: Autonomous material transport AGV for warehouse-to-production logistics.
+cover_image: /pictures/agv.png
+tags: [Pixy camera, NFC, Proximity Sensor, PID Control, Hoverboard Motors, Embedded System]
+featured: true
+demo_url: https://drive.google.com/file/d/1wfPRd6F6tgYcMVUB-KC_u0ycUEvOx157/view?usp=sharing
 repo_url: 
-date: 2021-11-15
+date: 2023-05-01
 ---
 
 ## Project Overview
 
-This project combines a 2D Lidar sensor with a Dynamixel servo motor to create a 3D scanning and tracking system for robotics applications. The system provides full 3D environmental perception by sweeping the 2D Lidar across an additional axis.
+This AGV autonomously transports materials from the warehouse to the production area. The system is designed for efficient operation and safety in an indoor logistics environment.
 
-![3D Lidar System](/assets/images/projects/3d_lidar_1.png)
+![AGV](/pictures/agv.png)
+
+## System Description
+
+The AGV operation is built around three key sensing functions:
+
+- **Line Navigation**: Uses a **Pixy Camera** to detect and follow floor guidance lines.
+- **Station/Destination Identification**: Uses an **NFC module** to identify stations and trigger stop/operation logic.
+- **Safety**: Uses a **proximity sensor** to detect obstacles and prevent collisions.
+
+The system is driven by **hoverboard motors**, providing strong traction and torque suitable for carrying materials.
+
+## Hardware Architecture
+
+### Main Controller
+- **Arduino Mega** as the **main controller**
+  - Reads sensors (Pixy Camera, NFC, proximity)
+  - Executes navigation and station/destination logic
+  - Outputs motor command signals and control actions
+
+### Remote Monitoring
+- **ESP32** for **remote monitoring**
+  - Sends system status information to a remote device/dashboard
+  - Useful for operation tracking, debugging, and basic telemetry monitoring
+
+### Sensors
+- **Pixy Camera**: line detection and tracking
+- **NFC module**: station/destination identification
+- **Proximity sensor**: obstacle detection for safety control
+
+### Actuation
+- **Hoverboard motors** as the main drive actuators
+- Motor control behavior optimized with **PID tuning** for smoother response and stability
+
+## User Interface (HMI)
+
+The AGV includes an on-device interface mounted on the panel:
+
+- **Multiple buttons** for user input (e.g., selection / confirmation / navigation)
+- A **small display** on the top area of the panel to **set the destination** before running
+
+This interface allows the operator to quickly set the target station without needing a laptop.
 
 ## Mechanical Design
 
-### System Components
+- **Trolley** as a platform to carry the materials to be delivered.
+- **2D-printed mounting bracket for the NFC module**, ensuring stable alignment and reliable tag reading
+- **Panel design** to house the interface components and wiring organization
 
-- **2D Lidar Sensor**: RPLidar for 2D distance measurements
-- **Dynamixel Servo Motor**: Provides precise angular positioning
-- **USB to Dynamixel Interface**: Communication and control
-- **Power Supply**: LiPo battery for portable operation
-- **Mounting Structure**: Custom-designed mechanical assembly
+![Control Panel / Wiring](/pictures/projects/agv/agv_panel.png)
 
-![System Setup](/assets/images/projects/3d_lidar_2.png)
+## Control & Tuning
 
-The mechanical design ensures:
-- Stable Lidar mounting
-- Smooth servo motion
-- Minimal vibration
-- Compact form factor
-- Easy integration with robot platforms
+### PID Tuning
 
-## Software Architecture
+The AGV control performance was improved by iterative tuning of **PID parameters**, focusing on:
 
-All programs run on **ROS (Robot Operating System)**, which already supports the entire environment and necessary libraries:
+- More stable line-following behavior
+- Better response to speed changes and load conditions
+- Smooth station starting & stopping behavior
 
-### Key Libraries & Tools
+## Integration & Troubleshooting
 
-- **PointCloud Library (PCL)**: 3D point cloud processing
-- **Dynamixel SDK**: Servo motor control
-- **RPLidar Library**: Lidar data acquisition
-- **RViz**: 3D visualization
-- **TF**: Coordinate transformations
+During integration and testing, several issues were addressed to ensure stable operation:
 
-## Technical Implementation
-
-### 3D Point Cloud Generation
-
-The system works by:
-1. **Servo Positioning**: Dynamixel servo moves to specific angle
-2. **2D Scan**: Lidar performs 360° scan at current angle
-3. **Data Collection**: 2D scan data is captured with angle information
-4. **3D Reconstruction**: Multiple 2D scans combined into 3D point cloud
-5. **Processing**: PointCloud filtering and transformation
-
-### Coordinate Transformation
-
-Using **linear algebra fundamentals** and **ROS TF system**:
-- Transform 2D scan points to 3D space
-- Account for servo angle and position
-- Maintain accurate coordinate frames
-- Enable real-time visualization
-
-![3D Visualization](/assets/images/projects/3d_lidar_3.png)
-
-## Perception Capabilities
-
-### 3D Environment Mapping
-- Generate 3D point clouds of surroundings
-- Real-time environment reconstruction
-- Obstacle detection in 3D space
-
-### Object Tracking
-- Track moving objects in 3D
-- Estimate object positions and velocities
-- Support multiple object tracking
-
-### SLAM Integration
-- Compatible with 3D SLAM algorithms
-- Provides rich sensor data for mapping
-- Enables autonomous navigation
+- Sensor calibration for reliable navigation and consistent detection
+- Wiring improvements to reduce noise and prevent intermittent connections
+- Mechanical fixes to ensure alignment and stable sensor mounting
+- Verification of destination selection workflow through the on-device interface
 
 ## Technologies Used
 
-- **ROS Framework**: System integration and communication
-- **PointCloud Library (PCL)**: 3D data processing
-- **Dynamixel SDK**: Motor control
-- **RPLidar Driver**: Sensor interface
-- **Python/C++**: Software implementation
-- **RViz**: Visualization
-- **TF Library**: Coordinate transforms
+- **Arduino Mega** (main controller)
+- **ESP32** (remote monitoring / telemetry)
+- **Pixy Camera** (line navigation)
+- **NFC module** (station/destination identification)
+- **Proximity sensor** (safety)
+- **Buttons + small display** (destination selection interface)
+- **PID control** (motion/control tuning)
+- **Hoverboard motors** (actuation)
+- **Mechanical design** (trolley, NFC mount, panel)
 
-## Applications
+## Jobdesk / Contributions
 
-This 3D Lidar system is valuable for:
+- Analyzed and calibrated the system to ensure proper AGV operation.
+- Enhanced AGV features for optimal performance.
+- Addressed wiring and mechanical issues during integration.
+- Fine-tuned **PID parameters** to optimize control performance.
+- Implemented/assisted **ESP32-based remote monitoring** for operational visibility.
+- Contributed to **mechanical design** (rack, NFC mounting, and panel/interface layout).
 
-### Robotics Navigation
-- 3D obstacle avoidance
-- Terrain mapping
-- Path planning in 3D space
+## Video Demo
 
-### Autonomous Vehicles
-- 3D environment perception
-- Object detection and tracking
-- Collision avoidance
-
-### 3D Mapping
-- Indoor mapping
-- Industrial inspection
-- Archaeological scanning
-
-### Research & Development
-- Robotics perception research
-- SLAM algorithm testing
-- Sensor fusion experiments
-
-## Performance Characteristics
-
-- **Scan Range**: Based on RPLidar specifications (typically 0.15-12m)
-- **Angular Resolution**: High precision from Dynamixel servo
-- **Scan Speed**: Adjustable based on application requirements
-- **Point Cloud Density**: Configurable scan resolution
-- **Real-time Processing**: Capable of real-time operation
-
-## Development Challenges
-
-### Synchronization
-- Coordinate Lidar scans with servo position
-- Ensure timing accuracy
-- Minimize motion artifacts
-
-### Data Processing
-- Handle large point cloud data efficiently
-- Real-time processing requirements
-- Memory management
-
-### Calibration
-- Accurate transformation parameters
-- Servo angle calibration
-- Sensor alignment
-
-## Results
-
-Successfully developed a functional 3D perception system that:
-- Generates accurate 3D point clouds
-- Operates in real-time
-- Integrates seamlessly with ROS
-- Provides rich environmental data
-- Supports various robotics applications
-
-## Future Enhancements
-
-- [ ] Implement point cloud filtering algorithms
-- [ ] Add semantic segmentation
-- [ ] Integrate with SLAM systems
-- [ ] Optimize scanning patterns
-- [ ] Add multi-Lidar fusion
-- [ ] Develop object recognition capabilities
-
-## Skills Demonstrated
-
-- ROS framework proficiency
-- 3D point cloud processing
-- Sensor integration
-- Coordinate transformations
-- Linear algebra application
-- Real-time systems
-- Mechanical design
-- Electronics integration
-- Robotics perception
+Video: https://bit.ly/demo_AGV
