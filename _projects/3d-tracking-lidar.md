@@ -62,7 +62,7 @@ This interface allows the operator to quickly set the target station without nee
 - **2D-printed mounting bracket for the NFC module**, ensuring stable alignment and reliable tag reading
 - **Panel design** to house the interface components and wiring organization
 
-![Control Panel / Wiring](/pictures/projects/agv/agv_panel.png)
+![Control Panel / Wiring](/pictures/agv_circuit.jpg)
 
 ## Control & Tuning
 
