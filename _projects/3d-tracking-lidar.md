@@ -27,21 +27,12 @@ The system is driven by **hoverboard motors**, providing strong traction and tor
 
 ## Hardware Architecture
 
-### Main Controller
-- **Arduino Mega** as the **main controller**
-  - Reads sensors (Pixy Camera, NFC, proximity)
-  - Executes navigation and station/destination logic
-  - Outputs motor command signals and control actions
-
-### Remote Monitoring
-- **ESP32** for **remote monitoring**
-  - Sends system status information to a remote device/dashboard
-  - Useful for operation tracking, debugging, and basic telemetry monitoring
-
-### Sensors
+- **Arduino Mega** as the main controller
+- **ESP32** for remote monitoring
 - **Pixy Camera**: line detection and tracking
 - **NFC module**: station/destination identification
 - **Proximity sensor**: obstacle detection for safety control
+- **LiPo battery** as a power system
 
 ### Actuation
 - **Hoverboard motors** as the main drive actuators
@@ -50,11 +41,8 @@ The system is driven by **hoverboard motors**, providing strong traction and tor
 ## User Interface (HMI)
 
 The AGV includes an on-device interface mounted on the panel:
-
 - **Multiple buttons** for user input (e.g., selection / confirmation / navigation)
 - A **small display** on the top area of the panel to **set the destination** before running
-
-This interface allows the operator to quickly set the target station without needing a laptop.
 
 ## Mechanical Design
 
@@ -105,5 +93,3 @@ During integration and testing, several issues were addressed to ensure stable o
 - Contributed to **mechanical design** (rack, NFC mounting, and panel/interface layout).
 
 ## Video Demo
-
-Video: https://bit.ly/demo_AGV
