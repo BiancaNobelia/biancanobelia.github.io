@@ -1,6 +1,6 @@
 ---
-title: Model Predictive Control (MPC) on Ackermann Drive Robot
-description: Implementing MPC for autonomous vehicle simulation on ROS Gazebo with Lidar-based navigation in dynamic environments.
+title: MCB Mechanical Design
+description: Design and develop mechanical design for new MCB products.
 cover_image: /assets/images/projects/ackermann_mpc_1.png
 tags: [ROS, Autonomous Vehicle, MPC, Gazebo, URDF, Path Planning]
 featured: true

@@ -4,6 +4,7 @@ description: Autonomous material transport AGV for warehouse-to-production logis
 cover_image: /pictures/agv.png
 tags: [Pixy camera, NFC, Proximity Sensor, PID Control, Hoverboard Motors, Embedded System]
 featured: true
+project_type: Full-time Work
 demo_url: https://drive.google.com/file/d/1wfPRd6F6tgYcMVUB-KC_u0ycUEvOx157/view?usp=sharing
 repo_url: 
 date: 2023-05-01

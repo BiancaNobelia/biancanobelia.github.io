@@ -1,9 +1,10 @@
 ---
-title: Balance Control System on Humanoid Robot
-description: Real-time Center of Mass (CoM) projection for 20 DoF humanoid robot using ROS, URDF, and RViz with 68% error reduction.
-cover_image: /assets/images/projects/dynamic_walking_1.png
-tags: [ROS, Humanoid, URDF, Robotics, Digital Twin, Kinematics]
+title: Balance Control System on Humanoid Robot (GCoM-based Stability Analysis)
+description: Stability analysis and balance evaluation for a humanoid dance robot using IMU (GY-952) and Ground Projection Center of Mass (GCoM) computed from a simplified five-link model.
+cover_image: /pictures/erisa.png
+tags: [Humanoid Robotics, Balance Control, Stability Analysis, GCoM, Center of Mass, IMU, Embedded System, Kinematics, Five-Link Model, PID]
 featured: true
+project_type: Research
 demo_url: 
 repo_url: 
 date: 2022-12-01
@@ -13,7 +14,7 @@ date: 2022-12-01
 
 A humanoid robot model is needed to record all Center of Mass (CoM) locations of each link connected to the robot body so that a single point position can be calculated that represents the entire body of the humanoid robot.
 
-![Humanoid Robot Model](/assets/images/projects/dynamic_walking_1.png)
+![Humanoid Robot Model](/pictures/erisa2.png.png)
 
 ## Technical Implementation
 
@@ -27,13 +28,15 @@ The Humanoid Robot can be said to be in a balanced position if the position of t
 
 This project involved extensive use of linear algebra. The exciting part for me was applying mathematical concepts through programming and finding the most effective computational methods. I used a **recursive style** proposed by Mr. Shuuji Kajita in his book "Introduction to Humanoid Robot".
 
-## Robot Specifications
+## Robot Specif
+
+ications
 
 The humanoid robot designed in this project has:
-- **Height**: ±590 mm
-- **Weight**: ±4.9 kg
-- **Degrees of Freedom**: 20 DoF
-- **Actuation**: Dynamixel servo motors
+- **Height**: ±604 mm
+- **Weight**: ±3.0 kg
+- **Degrees of Freedom**: 29 DoF
+- **Actuation**: Dynamixel & Hi-Tech HS servo motor 
 
 ## Key Features
 

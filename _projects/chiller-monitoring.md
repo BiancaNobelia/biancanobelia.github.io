@@ -4,7 +4,7 @@ description: IoT-based monitoring system for a chiller. Monitors chiller input/o
 cover_image: /pictures/chiller.png
 tags: [IoT, ESP32, Thermocouple, Temperature Sensing, Wi-Fi, Web Dashboard]
 featured: false
-project_type: full-time
+project_type: Full-time Work
 demo_url: 
 repo_url:
 date: 2023-02-01
