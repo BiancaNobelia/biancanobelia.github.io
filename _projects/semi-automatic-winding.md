@@ -32,7 +32,7 @@ A **Weintek HMI** is used for user operation and monitoring. Communication betwe
 - **RS232 / RS485 communication** (servo drive ↔ HMI communication)
 - Electrical control panel (wiring, protection, and integration)
 
-<img src="/pictures/winding_circuit.jpg" alt="AGV" style="width:50%; max-width:520px; height:auto;">
+<img src="/pictures/winding_circuit.jpg" alt="winding" style="width:50%; max-width:520px; height:auto;">
 
 ## Jobdesk / Contributions
 

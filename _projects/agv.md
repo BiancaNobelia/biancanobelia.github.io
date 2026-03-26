@@ -13,7 +13,7 @@ date: 2023-05-01
 
 This AGV autonomously transports materials from the warehouse to the production area. The system is designed for efficient operation and safety in an indoor logistics environment.
 
-<img src="/pictures/agv.png" alt="AGV" style="width:40%; max-width:520px; height:auto;">
+<img src="/pictures/agv.png" alt="AGV" style="width:60%; max-width:520px; height:auto;">
 
 ## System Description
 

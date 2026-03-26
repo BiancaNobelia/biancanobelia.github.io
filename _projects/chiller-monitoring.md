@@ -1,6 +1,6 @@
 ---
 title: Chiller Monitoring (IoT)
-description: IoT-based monitoring system for a chiller. Monitors chiller input/output temperatures using thermocouple sensors, observes on/off status of the chiller, compressor, and water pump, and displays data on a website via Wi-Fi. Implemented using ESP32/ESP8266 with an electrical panel build.
+description: IoT-based monitoring system for a chiller. Monitors chiller input/output temperatures using thermocouple sensors, observes chiller status, compressor, and water pump, and displays data on a website via Wi-Fi. 
 cover_image: /pictures/chiller.png
 tags: [IoT, ESP32, Thermocouple, Temperature Sensing, Wi-Fi, Web Dashboard]
 featured: false
