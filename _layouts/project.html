@@ -5,12 +5,6 @@ layout: default
 <div class="project-detail">
     <div class="container">
         <header class="project-header">
-            {% if page.project_type %}
-            <span class="badge badge-{{ page.project_type }}">
-                {% if page.project_type == "full-time" %}Full-time Work{% elsif page.project_type == "internship" %}Internship{% else %}Study{% endif %}
-            </span>
-            {% endif %}
-
             <h1>{{ page.title }}</h1>
             {% if page.subtitle %}
             <p class="subtitle">{{ page.subtitle }}</p>
@@ -27,8 +21,12 @@ layout: default
         
         {% if page.cover_image %}
         <div class="project-cover">
+            {% if page.project_type %}
+            <div class="project-type-badge">{{ page.project_type }}</div>
+            {% endif %}
+
             <img src="{{ page.cover_image }}" alt="{{ page.title }}"
-     style="width:100%; max-height:320px; object-fit:cover; border-radius:12px;">
+                 style="width:100%; max-height:320px; object-fit:cover; border-radius:12px;">
         </div>
         {% endif %}
         
