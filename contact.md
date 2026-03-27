@@ -28,7 +28,7 @@ permalink: /contact/
                 </svg>
                 GitHub
             </h3>
-            <p><a href="https://github.com/tzf230201" target="_blank" rel="noopener noreferrer">github.com/tzf230201</a></p>
+            <p><a href="https://github.com/BiancaNobelia" target="_blank" rel="noopener noreferrer">github.com/BiancaNobelia</a></p>
         </div>
         
         <div class="contact-method">
@@ -38,7 +38,7 @@ permalink: /contact/
                 </svg>
                 LinkedIn
             </h3>
-            <p><a href="https://linkedin.com/in/teukuzikrifatahillah" target="_blank" rel="noopener noreferrer">linkedin.com/in/teukuzikrifatahillah</a></p>
+            <p><a href="https://www.linkedin.com/in/biancanobelia/" target="_blank" rel="noopener noreferrer">linkedin.com/in/biancanobelia/</a></p>
         </div>
         
         <div class="contact-method">
@@ -48,7 +48,7 @@ permalink: /contact/
                 </svg>
                 WhatsApp
             </h3>
-            <p><a href="https://wa.me/6285156088402" target="_blank" rel="noopener noreferrer">+62 851-5608-8402</a></p>
+            <p><a href="https://wa.me/6281553950064" target="_blank" rel="noopener noreferrer">+62 815-5395-0064</a></p>
         </div>
     </div>
 </div>

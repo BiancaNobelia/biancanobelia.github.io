@@ -1,12 +1,12 @@
 ---
-title: MCB Mechanical Design
-description: Design and develop mechanical design for new MCB products.
-cover_image: /assets/images/projects/ackermann_mpc_1.png
-tags: [ROS, Autonomous Vehicle, MPC, Gazebo, URDF, Path Planning]
+title: Mechanical Design
+description: Design new products, find suppliers, calculate productions cost, make and test jig
+cover_image: /pictures/mcb.png
+tags: [3D modelling, drawing, testing, mass production, Resin 3D Print, Milling machine]
 featured: true
 demo_url: 
 repo_url: 
-date: 2024-01-15
+date: 2023-09-15
 ---
 
 ## Overview
