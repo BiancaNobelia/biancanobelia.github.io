@@ -4,7 +4,7 @@ description: Developed an HMI-based monitoring and operation interface for an EV
 cover_image: /pictures/ev_bus.png
 tags: [HMI, EV Charger, Monitoring, Industrial Automation, Schneider, Beijer Electronics, UI Design]
 featured: true
-project_type: Internship
+project_type: internship
 demo_url: https://drive.google.com/file/d/1vjVBOgTVrI5Ibc4cHMgSGH2soXayvMAt/view?usp=sharing
 repo_url:
 date: 2022-07-01

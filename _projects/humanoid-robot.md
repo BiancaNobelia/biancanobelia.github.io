@@ -4,7 +4,7 @@ description: Stability analysis and balance evaluation for a humanoid dance robo
 cover_image: /pictures/erisa.png
 tags: [Humanoid Robotics, Balance Control, Stability Analysis, GCoM, Center of Mass, IMU, Embedded System, Kinematics, Five-Link Model, PID]
 featured: true
-project_type: Research
+project_type: research
 demo_url: 
 repo_url: 
 date: 2022-12-01
@@ -12,7 +12,7 @@ date: 2022-12-01
 
 ## Project Overview
 
-A humanoid robot model is needed to record all Center of Mass (CoM) locations of each link connected to the robot body so that a single point position can be calculated that represents the entire body of the humanoid robot.
+This project develops a balance system method for the **ERISA humanoid dance robot (29 DoF)** while performing **walking and dancing motions**. The main stability variable is the **Ground Projection Center of Mass (GCoM)**, estimated using a **simplified five-link model** combined with real-time orientation feedback from an **IMU**.
 
 ![Humanoid Robot Model](/pictures/erisa2.png.png)
 
