@@ -11,7 +11,7 @@ date: 2023-09-15
 
 ## Overview
 
-I've implemented Model Predictive Control (MPC) on a simulated Ackermann drive robot described in URDF (Universal Robot Description Format). This allows the robot to predict future states and adjust its path accordingly. Utilizing the Robot Operating System (ROS), the robot navigates through dynamic environments using Gazebo for 3D simulation and RViz for visualization.
+This project was about developing new product 
 
 ## Key Features
 

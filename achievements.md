@@ -1,54 +1,38 @@
 ---
 layout: page
 title: Achievements & Awards
-subtitle: Selected achievements, awards, scholarships, and speaking engagements
+subtitle: 
 permalink: /achievements/
 ---
 
 <div class="achievements">
 
   <!-- ===================== -->
-  <!-- ACHIEVEMENTS SECTION  -->
+  <!-- SCHOLARSHIPS SECTION  -->
   <!-- ===================== -->
-  <h2 class="ach-section">Achievements</h2>
+  <h2 class="ach-section">Scholarships</h2>
 
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a class="ach-link-title" href="https://drive.google.com/file/d/1eOLVvta4I-ZEHwXhNI67SAmTudaXsAVG/view?usp=sharing" target="_blank" rel="noopener">
-          <b>PLC-Based Electronic Equipment Operation Training</b>
-        </a>
-
+        <a>MEXT Scholarship</a>
         <div class="ach-org">
-          <span class="muted">Organizer:</span> <i>Industry 4.0 Digital Center (PIDI 4.0)</i>
+          <span class="muted">Organizer:</span> <i>Japanese Goverment</i>
         </div>
       </div>
-
-      <div class="ach-date">Sept 2023</div>
+      <div class="ach-date">2024–2026</div>
     </div>
-
-    <ul class="ach-bullets">
-      <li>
-        <a class="ach-bullet-link"
-           href="https://drive.google.com/file/d/10OBtYhmONUZJ61vSbbygiijCKlAQ2E8u/view?usp=sharing"
-           target="_blank" rel="noopener">
-          One of the best participants among 47 participants.
-        </a>
-      </li>
-    </ul>
   </div>
 
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a class="ach-link-title" href="https://drive.google.com/file/d/18ncPZ4W3_EI0d2H6b33qEETkZ6EidaME/view?usp=sharing" target="_blank" rel="noopener">
-          <b>Guest Speaker at National Robotics Workshop</b>
-        </a>
+        <a>Adaro Scholarship</a>
         <div class="ach-org">
-          <span class="muted">Organizer:</span> <i>Padang State University (UNP)</i>
+          <span class="muted">Organizer:</span> <i>PT. Adaro Energy, Tbk</i>
         </div>
       </div>
-      <div class="ach-date">Dec 2021</div>
+      <div class="ach-date">2021–2022</div>
     </div>
   </div>
 
@@ -105,7 +89,7 @@ permalink: /achievements/
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a>Innovative and Inspiring Application Competition for COVID-19</a>
+        <b>Innovative and Inspiring Application Competition for COVID-19</b>
         <div class="ach-org">
           <span class="muted">Organizer:</span> <i>Sepuluh Nopember Institute of Technology (ITS)</i>
         </div>
@@ -122,33 +106,49 @@ permalink: /achievements/
     </ul>
   </div>
 
-
+  
   <!-- ===================== -->
-  <!-- SCHOLARSHIPS SECTION  -->
+  <!-- ACHIEVEMENTS SECTION  -->
   <!-- ===================== -->
-  <h2 class="ach-section">Scholarships</h2>
+  <h2 class="ach-section">Achievements</h2>
 
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a>MEXT Scholarship</a>
+        <a class="ach-link-title" href="https://drive.google.com/file/d/1eOLVvta4I-ZEHwXhNI67SAmTudaXsAVG/view?usp=sharing" target="_blank" rel="noopener">
+          <b>PLC-Based Electronic Equipment Operation Training</b>
+        </a>
+
         <div class="ach-org">
-          <span class="muted">Organizer:</span> <i>Japanese Goverment</i>
+          <span class="muted">Organizer:</span> <i>Industry 4.0 Digital Center (PIDI 4.0)</i>
         </div>
       </div>
-      <div class="ach-date">2024–2026</div>
+
+      <div class="ach-date">Sept 2023</div>
     </div>
+
+    <ul class="ach-bullets">
+      <li>
+        <a class="ach-bullet-link"
+           href="https://drive.google.com/file/d/10OBtYhmONUZJ61vSbbygiijCKlAQ2E8u/view?usp=sharing"
+           target="_blank" rel="noopener">
+          One of the best participants among 47 participants.
+        </a>
+      </li>
+    </ul>
   </div>
 
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a>Adaro Scholarship</a>
+        <a class="ach-link-title" href="https://drive.google.com/file/d/18ncPZ4W3_EI0d2H6b33qEETkZ6EidaME/view?usp=sharing" target="_blank" rel="noopener">
+          <b>Guest Speaker at National Robotics Workshop</b>
+        </a>
         <div class="ach-org">
-          <span class="muted">Organizer:</span> <i>PT. Adaro Energy, Tbk</i>
+          <span class="muted">Organizer:</span> <i>Padang State University (UNP)</i>
         </div>
       </div>
-      <div class="ach-date">2021–2022</div>
+      <div class="ach-date">Dec 2021</div>
     </div>
   </div>
 

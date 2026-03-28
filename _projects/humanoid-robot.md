@@ -28,9 +28,7 @@ The Humanoid Robot can be said to be in a balanced position if the position of t
 
 This project involved extensive use of linear algebra. The exciting part for me was applying mathematical concepts through programming and finding the most effective computational methods. I used a **recursive style** proposed by Mr. Shuuji Kajita in his book "Introduction to Humanoid Robot".
 
-## Robot Specif
-
-ications
+## Robot Specifications
 
 The humanoid robot designed in this project has:
 - **Height**: ±604 mm
@@ -42,10 +40,10 @@ The humanoid robot designed in this project has:
 
 ### Real-time CoM Calculation
 - Recursive algorithm for efficient computation
-- Real-time visualization in RViz
+<!-- - Real-time visualization in RViz -->
 - Dynamic balance monitoring
 
-### Support Polygon Detection
+<!-- ### Support Polygon Detection
 - Convex hull computation using Jarvis March
 - Stability margin calculation
 - Visual feedback of support area
@@ -53,13 +51,13 @@ The humanoid robot designed in this project has:
 ### Digital Twin Synchronization
 - Real-time joint state monitoring
 - Accurate physics simulation
-- Sensor data integration
+- Sensor data integration -->
 
 ## Technologies Used
 
-- **Framework**: ROS (Robot Operating System)
-- **Visualization**: RViz
-- **Robot Description**: URDF/Xacro
+- **Framework**: STM32F4
+<!-- - **Visualization**: RViz
+- **Robot Description**: URDF/Xacro -->
 - **Programming**: C++, Python
 - **Mathematics**: Linear algebra, kinematics
 - **Hardware**: Dynamixel servos, IMU sensors
