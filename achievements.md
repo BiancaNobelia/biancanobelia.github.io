@@ -25,11 +25,13 @@ permalink: /achievements/
     </div>
 
     <ul class="ach-bullets">
-      <li>
-        One of the best participants among 47 participants.
-        <!-- Optional bullet link (GDrive) -->
-        <a href="https://drive.google.com/file/d/10OBtYhmONUZJ61vSbbygiijCKlAQ2E8u/view?usp=sharing" target="_blank" rel="noopener">Certificate</a>
-      </li>
+        <li>
+            <a class="ach-bullet-link"
+            href="https://drive.google.com/file/d/10OBtYhmONUZJ61vSbbygiijCKlAQ2E8u/view?usp=sharing"
+            target="_blank" rel="noopener">
+            One of the best participants among 47 participants.
+            </a>
+        </li>
     </ul>
   </div>
 
@@ -37,7 +39,7 @@ permalink: /achievements/
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a class="ach-link-title" href="PASTE_GDRIVE_LINK_TITLE" target="_blank" rel="noopener">
+        <a class="ach-link-title" href="https://drive.google.com/file/d/18ncPZ4W3_EI0d2H6b33qEETkZ6EidaME/view?usp=sharing" target="_blank" rel="noopener">
           <b>National Robotics Workshop</b>
         </a>
         <div class="ach-org">
@@ -50,7 +52,6 @@ permalink: /achievements/
     <ul class="ach-bullets">
       <li>
         Guest speaker for up to 100 audiences.
-        <a href="PASTE_GDRIVE_LINK_CERTIFICATE" target="_blank" rel="noopener">Certificate</a>
       </li>
     </ul>
   </div>
@@ -59,9 +60,9 @@ permalink: /achievements/
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a class="ach-link-title" href="PASTE_GDRIVE_LINK_TITLE" target="_blank" rel="noopener">
+        <!-- <a class="ach-link-title" href="PASTE_GDRIVE_LINK_TITLE" target="_blank" rel="noopener"> -->
           <b>Indonesia Dance Robot Contest 2021</b>
-        </a>
+        <!-- </a> -->
         <div class="ach-org">
           <span class="muted">Organizer:</span> <i>Ministry of Education, Culture, Research, and Technology</i>
         </div>
@@ -70,40 +71,61 @@ permalink: /achievements/
     </div>
 
     <ul class="ach-bullets">
-      <li>1st Place at National Level. <a href="PASTE_GDRIVE_LINK_CERTIFICATE_1" target="_blank" rel="noopener">Certificate</a></li>
-      <li>3rd Place at Regional Level. <a href="PASTE_GDRIVE_LINK_CERTIFICATE_2" target="_blank" rel="noopener">Certificate</a></li>
+      <li> 
+        <a class="ach-bullet-link" href="https://drive.google.com/file/d/1TAdVoE7uj8ahWS_Szbyaou9UoofGWCCG/view?usp=sharing" target="_blank" rel="noopener">1st Place at National Level.</a></li>
+      <li> <a class="ach-bullet-link" href="https://drive.google.com/file/d/1B6-panSFDWkkrHbqffzykf4CL7OJV1TO/view?usp=sharing" target="_blank" rel="noopener">3rd Place at Regional Level.</a></li>
     </ul>
   </div>
 
+<div class="ach-item">
+    <div class="ach-head">
+      <div class="ach-title">
+        <!-- <a class="ach-link-title" href="PASTE_GDRIVE_LINK_TITLE" target="_blank" rel="noopener"> -->
+          <b>MEXT Scholarship</b>
+        <!-- </a> -->
+        <div class="ach-org">
+          <span class="muted">Organizer:</span> <i>Japanese Goverment</i>
+        </div>
+      </div>
+      <div class="ach-date">(2024–2026)</div>
+    </div>
+
+    <!-- <ul class="ach-bullets">
+      <li>
+        Granted a full scholarship.
+        <!-- <a href="PASTE_GDRIVE_LINK_CERTIFICATE" target="_blank" rel="noopener">Certificate</a> -->
+      </li>
+    </ul> -->
+  </div>
 
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a class="ach-link-title" href="PASTE_GDRIVE_LINK_TITLE" target="_blank" rel="noopener">
-          <b>Adaro Scholarship (2021–2022)</b>
-        </a>
+        <!-- <a class="ach-link-title" href="PASTE_GDRIVE_LINK_TITLE" target="_blank" rel="noopener"> -->
+          <b>Adaro Scholarship</b>
+        <!-- </a> -->
         <div class="ach-org">
           <span class="muted">Organizer:</span> <i>PT. Adaro Energy, Tbk</i>
         </div>
       </div>
-      <div class="ach-date">Sept 2021</div>
+      <div class="ach-date">(2021–2022)</div>
     </div>
 
-    <ul class="ach-bullets">
+    <!-- <ul class="ach-bullets">
       <li>
         Granted a full scholarship.
-        <a href="PASTE_GDRIVE_LINK_CERTIFICATE" target="_blank" rel="noopener">Certificate</a>
+        <!-- <a href="PASTE_GDRIVE_LINK_CERTIFICATE" target="_blank" rel="noopener">Certificate</a> -->
       </li>
-    </ul>
+    </ul> -->
   </div>
 
 
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a class="ach-link-title" href="PASTE_GDRIVE_LINK_TITLE" target="_blank" rel="noopener">
+        <!-- <a class="ach-link-title" href="PASTE_GDRIVE_LINK_TITLE" target="_blank" rel="noopener"> -->
           <b>Indonesia Dance Robot Contest 2020</b>
-        </a>
+        <!-- </a> -->
         <div class="ach-org">
           <span class="muted">Organizer:</span> <i>Ministry of Education, Culture, Research, and Technology</i>
         </div>
