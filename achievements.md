@@ -15,7 +15,7 @@ permalink: /achievements/
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a>MEXT Scholarship</a>
+        <b>MEXT Scholarship</b>
         <div class="ach-org">
           <span class="muted">Organizer:</span> <i>Japanese Goverment</i>
         </div>
@@ -27,7 +27,7 @@ permalink: /achievements/
   <div class="ach-item">
     <div class="ach-head">
       <div class="ach-title">
-        <a>Adaro Scholarship</a>
+        <b>Adaro Scholarship</b>
         <div class="ach-org">
           <span class="muted">Organizer:</span> <i>PT. Adaro Energy, Tbk</i>
         </div>

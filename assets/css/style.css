@@ -722,7 +722,7 @@ a:hover {
 
 /* Achievements page */
 .achievements{
-  border: 1px solid var(--line);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   background: rgba(255,255,255,0.02);
   padding: 14px;
@@ -730,7 +730,7 @@ a:hover {
 
 .ach-item{
   padding: 12px 10px;
-  border-top: 1px dashed var(--line);
+  border-top: 1px dashed var(--border-color);
 }
 .ach-item:first-child{
   border-top: none;
@@ -751,19 +751,19 @@ a:hover {
 .ach-date{
   min-width: 110px;
   text-align: right;
-  color: var(--muted);
+  color: var(--text-light);
   font-weight: 600;
   white-space: nowrap;
 }
 
 .ach-bullets{
   margin: 8px 0 0 18px;
-  color: var(--text);
+  color: var(--text-color);
 }
 
 .ach-link{
   margin: 12px 10px 0;
-  color: var(--muted);
+  color: var(--text-light);
 }
 
 /* clickable achievement title */
@@ -784,5 +784,5 @@ a:hover {
   font-size: 20px;
   letter-spacing: .2px;
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border-color);
 }
