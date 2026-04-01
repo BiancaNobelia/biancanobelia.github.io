@@ -1,59 +1,51 @@
 ---
 title: Mechanical Design
-description: Design new products, find suppliers, calculate productions cost, make and test jig
+description: Design new products, calculate production costs, source suppliers, and build/test jigs for mass production.
 cover_image: /pictures/mcb.png
-tags: [3D modelling, drawing, testing, mass production, Resin 3D Print, Milling machine]
+tags: [3D Modelling, Creo, Technical Drawing, Mass Production, 3D Print, Milling Machine]
 featured: true
+project-type: full-time
 demo_url: 
 repo_url: 
 date: 2023-09-15
+gallery:
+  - image: /pictures/miniature.png
+    caption: Miniature Company
+  - image: /pictures/wire_peeler.png
+    caption: Wire Peeler Simulation — New Blade Design
+  - image: /pictures/connector.png
+    caption: Combined C13/C19 Connector
+  - image: /pictures/connector1.png
+    caption: Multiple Combined Socket
+  - image: /pictures/connector2.png
+    caption: Locking Accessory Combined Socket
+  - image: /pictures/mcb.png
+    caption: Electronic Power Relay
+  - image: /pictures/mcb1.png
+    caption: Electronic Overcurrent Protection
 ---
 
 ## Overview
+This project focused on developing new products and preparing them for mass production — from initial concept design through prototyping, cost estimation, and production validation.
 
-This project was about developing new product 
+## Key Responsibilities
+- Designed 3D CAD models and 2D technical drawings for manufacturing using **Creo**.
+- Evaluated design feasibility for molds and dies, assessing whether existing tooling was capable of meeting production requirements.
+- Estimated costs for new **molds and dies** required for the manufacturing process.
+- Created prototypes using Resin 3D printing and milling machines.
+- Coordinated with suppliers to source components and compare quotations.
+- Built and tested **jigs and fixtures** to validate assembly and manufacturing processes.
+- Supported production readiness through manufacturability reviews and design improvements.
 
-## Key Features
+## Technologies Used
+- **CAD / Design:** PTC Creo (3D modelling & 2D drawings)
+- **Manufacturing / Prototyping:** 3D printing (FDM & Resin), milling machine
 
-The robot relies on a Lidar sensor to understand its surroundings, spotting obstacles and other simulation vehicles. It also uses odometry through dead reckoning to know its exact location amidst the chaos.
-
-![Ackermann MPC Simulation](/assets/images/projects/ackermann_mpc_1.png)
-
-Through this project, I aim to show that autonomous navigation in dynamic environments is achievable. With keen perception, smart planning, and accurate modeling, I'm paving the way for a future where autonomous vehicles can navigate the world around them effortlessly.
-
-## Technical Implementation
-
-### Technologies Used
-
-- **Robot Framework**: ROS (Robot Operating System)
-- **Simulation**: Gazebo, RViz
-- **Robot Description**: URDF (Universal Robot Description Format)
-- **Control Algorithm**: Model Predictive Control (MPC)
-- **Sensors**: Lidar, Odometry
-- **Path Planning**: Dynamic obstacle avoidance
-
-### Control System
-
-The MPC controller predicts future states of the vehicle and optimizes the control inputs to follow the desired trajectory while avoiding obstacles. The system processes Lidar data in real-time to detect dynamic obstacles and adjusts the path accordingly.
-
-## Results
-
-The implementation successfully demonstrates autonomous navigation capabilities with:
-- Real-time obstacle detection and avoidance
-- Smooth trajectory tracking using MPC
-- Accurate localization through sensor fusion
-- Robust performance in dynamic environments
-
-## Demo Video
-
-<video width="100%" controls>
-    <source src="/video/mpc_ackermann_clip_1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-## Future Improvements
-
-- [ ] Implement multi-vehicle coordination
-- [ ] Add machine learning for adaptive behavior
-- [ ] Optimize computational efficiency
-- [ ] Test in more complex environments
+<!-- ## Projects Gallery
+- Miniature company (/pictures/miniature.png)
+- Wire peeler simulation for new blade design (/pictures/wire_peeler.png)
+- Combined C13/C19 connector (/pictures/connector.png)
+- Multiple combined socket (/pictures/connector1.png)
+- Locking accessory combined socket (/pictures/connector2.png)
+- Electronic Power Relay (/pictures/mcb.png)
+- Electronic Overcurrent Protection (/pictures/mcb1.png) -->

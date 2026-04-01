@@ -38,11 +38,14 @@ layout: default
         
         {% if page.gallery %}
         <div class="project-gallery">
-            <h2>Gallery</h2>
+            <h2>Projects Gallery</h2>
             <div class="gallery-grid">
-                {% for image in page.gallery %}
+                {% for item in page.gallery %}
                 <div class="gallery-item">
-                    <img src="{{ image | relative_url }}" alt="{{ page.title }} screenshot">
+                    <img src="{{ item.image | relative_url }}" alt="{{ item.caption }}">
+                    {% if item.caption %}
+                    <div class="gallery-caption">{{ item.caption }}</div>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>

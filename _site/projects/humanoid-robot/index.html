@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Control System on ERISA Humanoid Dance Robot (GCoM-based Analysis) - Bianca Surya Nobelia</title>
+    <meta name="description" content="A highly motivated robotics engineer with expertise in Embedded Systems,  Computer Vision, Electronics Design, ROS/ROS2, and FPGA development.">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/">Bianca Surya Nobelia</a>
+        </div>
+        
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <ul class="navbar-menu">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/projects/" class="active">Projects</a></li>
+            <li><a href="/achievements/" >Achievements</a></li>
+            <li><a href="/resume/" >Resume</a></li>
+            <li><a href="/contact/" >Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    
+    <main class="main-content">
+        <div class="project-detail">
+    <div class="container">
+        <header class="project-header">
+            <h1>Balance Control System on ERISA Humanoid Dance Robot (GCoM-based Analysis)</h1>
+            
+            
+            
+            <div class="project-tags">
+                
+                <span class="tag">Humanoid Robot</span>
+                
+                <span class="tag">ERISA</span>
+                
+                <span class="tag">Balance Control</span>
+                
+                <span class="tag">Center of Mass</span>
+                
+                <span class="tag">Five-Link Model</span>
+                
+                <span class="tag">IMU</span>
+                
+                <span class="tag">PD Control</span>
+                
+            </div>
+            
+        </header>
+        
+        
+        <div class="project-cover">
+        
+            <span class="type-badge type-research">
+            Research
+            </span>
+        
+
+        <img src="/pictures/erisa.png" alt="Balance Control System on ERISA Humanoid Dance Robot (GCoM-based Analysis)"
+            style="width:100%; max-height:320px; object-fit:cover; border-radius:12px;">
+        </div>
+        
+        
+        <div class="project-content">
+            <h2 id="project-overview">Project Overview</h2>
+
+<p>This project focused on implementing a <strong>balance control system</strong> for the <strong>ERISA humanoid dance robot</strong> used in <strong>Indonesian Dance Robot Contest (KRSTI)</strong>. In KRSTI, robot stability is a key scoring factor because each zone contains different dance motions and transitions that can easily cause the robot to fall.</p>
+
+<p>To stabilize ERISA in several conditions such as during <strong>dancing while walking</strong>, <strong>lifting one leg</strong>, and <strong>stepping onto an obstacle</strong>, I implemented a <strong>closed-loop PD controller</strong> using <strong>pitch feedback</strong> from an IMU sensor, supported by a <strong>Ground Projection of Center of Mass (GCoM)</strong> analysis using a simplified <strong>Five-Link model</strong>.</p>
+
+<hr />
+
+<h2 id="robot-specifications">Robot Specifications</h2>
+
+<p>ERISA (EEPIS Robot Intelligent Sense of Art) is a full-body humanoid robot designed for Indonesia traditional dance performance.</p>
+
+<ul>
+  <li><strong>Degrees of Freedom</strong>: <strong>29 DoF</strong></li>
+  <li><strong>Actuators</strong> (4 types):
+    <ul>
+      <li>Dynamixel <strong>MX-28</strong> &amp; <strong>AX-12A</strong></li>
+      <li>Hitec <strong>HS-85MG</strong> &amp; <strong>HS-5055MG</strong></li>
+    </ul>
+  </li>
+  <li><strong>Main controller</strong>: <strong>STM32F407VGT6</strong></li>
+  <li><strong>Balance sensor</strong>: <strong>IMU GY-952</strong> (Euler angle output: roll/pitch/yaw)</li>
+</ul>
+
+<hr />
+
+<h2 id="system-architecture">System Architecture</h2>
+
+<h3 id="1-imu-measurement--data-processing-gy-952">1) IMU Measurement &amp; Data Processing (GY-952)</h3>
+<ul>
+  <li>The IMU provides <strong>Euler angles</strong> (roll, pitch, yaw).</li>
+  <li>Data is read via <strong>UART/USART</strong> and parsed from binary frames.</li>
+  <li>The system performs <strong>sensor calibration</strong> at startup to set a stable reference.</li>
+  <li>IMU accuracy testing showed low average error (≈ <strong>1.88%</strong> on positive tilt and <strong>2.49%</strong> on negative tilt), supporting its use for feedback control.</li>
+</ul>
+
+<h3 id="2-stability-variable-gcom-ground-projection-of-com">2) Stability Variable: GCoM (Ground Projection of CoM)</h3>
+<p>To represent robot stability with a simple but meaningful model, the humanoid body was simplified into a <strong>Five-Link model</strong> on the sagittal plane:</p>
+
+<ul>
+  <li>trunk, left thigh, left calf, right thigh, right calf</li>
+  <li>each link has: length, mass, CoM location</li>
+  <li><strong>pitch angle</strong> comes from IMU, while leg joint angles come from the current servo posture.</li>
+</ul>
+
+<p>The control objective is to keep <strong>GCoM inside the support polygon</strong> to prevent falling.</p>
+
+<hr />
+
+<!-- ## Mathematical Approach (Five-Link GCoM)
+
+The GCoM is computed by projecting each link’s CoM onto the ground direction and taking a mass-weighted average: -->
+
+<!-- \[
+GCoM = \frac{\sum m_i x_i}{\sum m_i}
+\]
+
+Where each \(x_i\) is the projected position of each link’s CoM (computed from link geometry and joint angles). The pitch angle from IMU is included in the projection so the estimation reflects real body tilt, not only joint posture. -->
+
+<!-- This GCoM value is used as a **stability indicator** and also as a basis for deciding which strategy should be applied. -->
+
+<hr />
+
+<h2 id="balance-recovery-strategy">Balance Recovery Strategy</h2>
+
+<p>This project uses <strong>two recovery strategies</strong>:</p>
+
+<h3 id="1-ankle-strategy-small-disturbances">1) Ankle Strategy (small disturbances)</h3>
+<p>Used when the disturbance is small. The controller mainly corrects posture through ankle-related joints to keep GCoM stable.</p>
+
+<h3 id="2-anklehip-strategy-large-disturbances">2) Ankle–Hip Strategy (large disturbances)</h3>
+<p>Used when the disturbance is larger (e.g., stepping onto an obstacle). This combines ankle correction with a hip-based reaction to generate stronger stabilization torque and reduce falling risk.</p>
+
+<h3 id="strategy-selection-threshold-based">Strategy Selection (Threshold-Based)</h3>
+<p>A threshold is determined empirically:</p>
+<ul>
+  <li>If the stability variable (GCoM / pitch error) is within the “safe” range → <strong>Ankle Strategy</strong></li>
+  <li>If it exceeds the threshold → <strong>Ankle–Hip Strategy</strong></li>
+</ul>
+
+<p>This prevents overreacting to small disturbances while still handling large disturbances robustly.</p>
+
+<hr />
+
+<h2 id="control-design-closed-loop-pd">Control Design (Closed-Loop PD)</h2>
+
+<p>ERISA originally behaves like an open-loop motion robot (trajectory + servo commands). To improve stability, I implemented <strong>closed-loop PD control</strong>:</p>
+
+<ul>
+  <li><strong>Error</strong>: pitch deviation from IMU reference</li>
+  <li><strong>Controller</strong>: PD (P for fast correction, D to damp oscillation)</li>
+</ul>
+
+<h2 id="experiments--results">Experiments &amp; Results</h2>
+
+<p>The system was evaluated under 3 challenging conditions:</p>
+
+<ol>
+  <li><strong>Dancing while walking</strong></li>
+  <li><strong>Dancing while lifting one leg</strong></li>
+  <li><strong>Dancing while stepping onto an obstacle (small height)</strong></li>
+</ol>
+
+<h3 id="key-outcomes">Key outcomes</h3>
+<ul>
+  <li>Without balance control, ERISA easily becomes unstable and can fall during transitions.</li>
+  <li><strong>Ankle Strategy</strong> improves stability for walking and one-leg motions, but can fail under larger disturbances.</li>
+  <li><strong>Ankle–Hip Strategy</strong> provides the most robust stabilization across all tested conditions, including obstacle stepping.</li>
+</ul>
+
+<p>Overall, the balance controller successfully <strong>expanded the motion boundary</strong> of ERISA so it can complete dance motions more safely and consistently.</p>
+
+<hr />
+
+<h2 id="technologies-used">Technologies Used</h2>
+<ul>
+  <li><strong>Embedded</strong>: STM32F407VGT6, UART/USART, real-time parsing</li>
+  <li><strong>Sensor</strong>: IMU <strong>GY-952</strong> (Euler angle output)</li>
+  <li><strong>Actuators</strong>: Dynamixel MX-28 / AX-12A, Hitec servos</li>
+  <li><strong>Control</strong>: PD control, threshold-based strategy switching</li>
+  <li><strong>Modeling</strong>: Five-Link humanoid simplification, GCoM computation</li>
+  <li><strong>Tools</strong>: STM32CubeIDE</li>
+</ul>
+
+<hr />
+
+        </div>
+        
+        
+        
+        <div class="project-links">
+            
+            
+            
+        </div>
+        
+        <div class="project-navigation">
+            <a href="/projects/" class="back-link">← Back to Projects</a>
+        </div>
+    </div>
+</div>
+
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bianca Surya Nobelia. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

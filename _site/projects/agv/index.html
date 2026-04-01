@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Guided Vehicle (AGV) - Bianca Surya Nobelia</title>
+    <meta name="description" content="A highly motivated robotics engineer with expertise in Embedded Systems,  Computer Vision, Electronics Design, ROS/ROS2, and FPGA development.">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/">Bianca Surya Nobelia</a>
+        </div>
+        
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <ul class="navbar-menu">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/projects/" class="active">Projects</a></li>
+            <li><a href="/achievements/" >Achievements</a></li>
+            <li><a href="/resume/" >Resume</a></li>
+            <li><a href="/contact/" >Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    
+    <main class="main-content">
+        <div class="project-detail">
+    <div class="container">
+        <header class="project-header">
+            <h1>Automatic Guided Vehicle (AGV)</h1>
+            
+            
+            
+            <div class="project-tags">
+                
+                <span class="tag">Pixy camera</span>
+                
+                <span class="tag">NFC</span>
+                
+                <span class="tag">Proximity Sensor</span>
+                
+                <span class="tag">PID Control</span>
+                
+                <span class="tag">Hoverboard Motors</span>
+                
+                <span class="tag">Embedded System</span>
+                
+            </div>
+            
+        </header>
+        
+        
+        <div class="project-cover">
+        
+            <span class="type-badge type-full-time">
+            Full-time Work
+            </span>
+        
+
+        <img src="/pictures/agv.png" alt="Automatic Guided Vehicle (AGV)"
+            style="width:100%; max-height:320px; object-fit:cover; border-radius:12px;">
+        </div>
+        
+        
+        <div class="project-content">
+            <h2 id="project-overview">Project Overview</h2>
+
+<p>This AGV autonomously transports materials from the warehouse to the production area. The system is designed for efficient operation and safety in an indoor logistics environment.</p>
+
+<p><img src="/pictures/agv.png" alt="AGV" style="width:60%; max-width:520px; height:auto;" /></p>
+
+<h2 id="system-description">System Description</h2>
+
+<p>The AGV operation is built around three key sensing functions:</p>
+
+<ul>
+  <li><strong>Line Navigation</strong>: Uses a <strong>Pixy Camera</strong> to detect and follow floor guidance lines.</li>
+  <li><strong>Station/Destination Identification</strong>: Uses an <strong>NFC module</strong> to identify stations and trigger stop/operation logic.</li>
+  <li><strong>Safety</strong>: Uses a <strong>proximity sensor</strong> to detect obstacles and prevent collisions.</li>
+</ul>
+
+<p>The system is driven by <strong>hoverboard motors</strong>, providing strong traction and torque suitable for carrying materials.</p>
+
+<h2 id="hardware-architecture">Hardware Architecture</h2>
+
+<ul>
+  <li><strong>Arduino Mega</strong> as the main controller</li>
+  <li><strong>ESP32</strong> for remote monitoring</li>
+  <li><strong>Pixy Camera</strong>: line detection and tracking</li>
+  <li><strong>NFC module</strong>: station/destination identification</li>
+  <li><strong>Proximity sensor</strong>: obstacle detection for safety control</li>
+  <li><strong>LiPo battery</strong> as a power system</li>
+</ul>
+
+<h3 id="actuation">Actuation</h3>
+<ul>
+  <li><strong>Hoverboard motors</strong> as the main drive actuators</li>
+  <li>Motor control behavior optimized with <strong>PID tuning</strong> for smoother response and stability</li>
+</ul>
+
+<h2 id="user-interface-hmi">User Interface (HMI)</h2>
+
+<p>The AGV includes an on-device interface mounted on the panel:</p>
+<ul>
+  <li><strong>Multiple buttons</strong> for user input (e.g., selection / confirmation / navigation)</li>
+  <li>A <strong>small display</strong> on the top area of the panel to <strong>set the destination</strong> before running</li>
+</ul>
+
+<h2 id="mechanical-design">Mechanical Design</h2>
+
+<ul>
+  <li><strong>Trolley</strong> as a platform to carry the materials to be delivered.</li>
+  <li><strong>3D-printed mounting bracket for the NFC module</strong>, ensuring stable alignment and reliable tag reading</li>
+  <li><strong>Panel design</strong> to house the interface components and wiring organization</li>
+</ul>
+
+<p><img src="/pictures/agv_circuit.jpg" alt="AGV" style="width:40%; max-width:520px; height:auto;" /></p>
+
+<h2 id="control--tuning">Control &amp; Tuning</h2>
+
+<h3 id="pid-tuning">PID Tuning</h3>
+
+<p>The AGV control performance was improved by iterative tuning of <strong>PID parameters</strong>, focusing on:</p>
+
+<ul>
+  <li>More stable line-following behavior</li>
+  <li>Better response to speed changes and load conditions</li>
+  <li>Smooth station starting &amp; stopping behavior</li>
+</ul>
+
+<h2 id="integration--troubleshooting">Integration &amp; Troubleshooting</h2>
+
+<p>During integration and testing, several issues were addressed to ensure stable operation:</p>
+
+<ul>
+  <li>Sensor calibration for reliable navigation and consistent detection</li>
+  <li>Wiring improvements to reduce noise and prevent intermittent connections</li>
+  <li>Mechanical fixes to ensure alignment and stable sensor mounting</li>
+  <li>Verification of destination selection workflow through the on-device interface</li>
+</ul>
+
+<h2 id="technologies-used">Technologies Used</h2>
+
+<ul>
+  <li><strong>Arduino Mega</strong> (main controller)</li>
+  <li><strong>ESP32</strong> (remote monitoring / telemetry)</li>
+  <li><strong>Pixy Camera</strong> (line navigation)</li>
+  <li><strong>NFC module</strong> (station/destination identification)</li>
+  <li><strong>Proximity sensor</strong> (safety)</li>
+  <li><strong>Buttons + small display</strong> (destination selection interface)</li>
+  <li><strong>PID control</strong> (motion/control tuning)</li>
+  <li><strong>Hoverboard motors</strong> (actuation)</li>
+  <li><strong>Mechanical design</strong> (trolley, NFC mount, panel)</li>
+</ul>
+
+<h2 id="jobdesk--contributions">Jobdesk / Contributions</h2>
+
+<ul>
+  <li>Analyzed and calibrated the system to ensure proper AGV operation.</li>
+  <li>Enhanced AGV features for optimal performance.</li>
+  <li>Addressed wiring and mechanical issues during integration.</li>
+  <li>Fine-tuned <strong>PID parameters</strong> to optimize control performance.</li>
+  <li>Implemented/assisted <strong>ESP32-based remote monitoring</strong> for operational visibility.</li>
+  <li>Contributed to <strong>mechanical design</strong> (rack, NFC mounting, and panel/interface layout).</li>
+</ul>
+
+<h2 id="video-demo">Video Demo</h2>
+
+        </div>
+        
+        
+        
+        <div class="project-links">
+            
+            <a href="https://drive.google.com/file/d/1wfPRd6F6tgYcMVUB-KC_u0ycUEvOx157/view?usp=sharing" class="btn btn-primary" target="_blank">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                    <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+                Live Demo
+            </a>
+            
+            
+            
+        </div>
+        
+        <div class="project-navigation">
+            <a href="/projects/" class="back-link">← Back to Projects</a>
+        </div>
+    </div>
+</div>
+
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bianca Surya Nobelia. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,10 +1,10 @@
 ---
 title: Balance Control System on ERISA Humanoid Dance Robot (GCoM-based Analysis)
-description: Implemented a closed-loop balance controller for the 29-DoF ERISA humanoid dance robot using IMU-based pitch feedback, Five-Link GCoM analysis, and PD control. The system selects ankle or ankle–hip strategy based on a threshold to keep stability during walking, one-leg motions, and stepping onto small obstacles.
-cover_image: /assets/images/projects/dynamic_walking_1.png
-tags: [Humanoid Robot, ERISA, Balance Control, GCoM, Center of Mass, Five-Link Model, IMU, GY-952, PD Control, Ankle Strategy, Hip Strategy, STM32, Dynamixel, Robotics]
+description: Implemented a closed-loop balance controller for the 29-DoF ERISA humanoid dance robot using IMU-based pitch feedback, Five-Link GCoM analysis, and PD control. 
+cover_image: /pictures/erisa.png
+tags: [Humanoid Robot, ERISA, Balance Control, Center of Mass, Five-Link Model, IMU, PD Control]
 featured: true
-project_type: Research
+project_type: research
 demo_url:
 repo_url:
 date: 2022-01-13
@@ -14,23 +14,20 @@ date: 2022-01-13
 
 This project focused on implementing a **balance control system** for the **ERISA humanoid dance robot** used in **Indonesian Dance Robot Contest (KRSTI)**. In KRSTI, robot stability is a key scoring factor because each zone contains different dance motions and transitions that can easily cause the robot to fall.
 
-To stabilize ERISA during **dancing while walking**, **lifting one leg**, and **stepping onto an obstacle**, I implemented a **closed-loop PD controller** using **pitch feedback** from an IMU sensor, supported by a **Ground Projection of Center of Mass (GCoM)** analysis using a simplified **Five-Link model**.
+To stabilize ERISA in several conditions such as during **dancing while walking**, **lifting one leg**, and **stepping onto an obstacle**, I implemented a **closed-loop PD controller** using **pitch feedback** from an IMU sensor, supported by a **Ground Projection of Center of Mass (GCoM)** analysis using a simplified **Five-Link model**.
 
 ---
 
-## Robot Specifications (ERISA)
+## Robot Specifications
 
-ERISA (EEPIS Robot Intelligent Sense of Art) is a full-body humanoid robot designed for traditional dance performance.
+ERISA (EEPIS Robot Intelligent Sense of Art) is a full-body humanoid robot designed for Indonesia traditional dance performance.
 
 - **Degrees of Freedom**: **29 DoF**
 - **Actuators** (4 types):
-  - Dynamixel **MX-28**
-  - Dynamixel **AX-12A**
-  - Hitec **HS-85MG**
-  - Hitec **HS-5055MG**
+  - Dynamixel **MX-28** & **AX-12A**
+  - Hitec **HS-85MG** & **HS-5055MG**
 - **Main controller**: **STM32F407VGT6**
 - **Balance sensor**: **IMU GY-952** (Euler angle output: roll/pitch/yaw)
-- **Balance axis used**: **Pitch** (front–back), because ERISA most frequently falls forward/backward.
 
 ---
 
@@ -53,17 +50,17 @@ The control objective is to keep **GCoM inside the support polygon** to prevent 
 
 ---
 
-## Mathematical Approach (Five-Link GCoM)
+<!-- ## Mathematical Approach (Five-Link GCoM)
 
-The GCoM is computed by projecting each link’s CoM onto the ground direction and taking a mass-weighted average:
+The GCoM is computed by projecting each link’s CoM onto the ground direction and taking a mass-weighted average: -->
 
-\[
+<!-- \[
 GCoM = \frac{\sum m_i x_i}{\sum m_i}
 \]
 
-Where each \(x_i\) is the projected position of each link’s CoM (computed from link geometry and joint angles). The pitch angle from IMU is included in the projection so the estimation reflects real body tilt, not only joint posture.
+Where each \(x_i\) is the projected position of each link’s CoM (computed from link geometry and joint angles). The pitch angle from IMU is included in the projection so the estimation reflects real body tilt, not only joint posture. -->
 
-This GCoM value is used as a **stability indicator** and also as a basis for deciding which strategy should be applied.
+<!-- This GCoM value is used as a **stability indicator** and also as a basis for deciding which strategy should be applied. -->
 
 ---
 
@@ -92,21 +89,6 @@ ERISA originally behaves like an open-loop motion robot (trajectory + servo comm
 
 - **Error**: pitch deviation from IMU reference  
 - **Controller**: PD (P for fast correction, D to damp oscillation)
-- **Reason PD (not PID)**: motion disturbance during dance is fast/fluctuating; the integral term is not essential and can slow response.
-
-### Tuned Gains (From Experiments)
-
-**Ankle Strategy (best gains):**
-- **Kp = 2.25**
-- **Kd = 0.125**
-
-**Hip Strategy (best gains in ankle–hip mode):**
-- **Kp = 6**
-- **Kd = 4**
-
-These values were selected based on stability/oscillation comparisons across multiple tests.
-
----
 
 ## Experiments & Results
 
