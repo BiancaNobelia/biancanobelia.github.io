@@ -1,118 +1,126 @@
 ---
-title: Balance Control System on ERISA Humanoid Dance Robot (GCoM-based Analysis)
+title: Balance Control System on Humanoid Dance Robot
 description: Implemented a closed-loop balance controller for the 29-DoF ERISA humanoid dance robot using IMU-based pitch feedback, Five-Link GCoM analysis, and PD control. 
 cover_image: /pictures/erisa.png
-tags: [Humanoid Robot, ERISA, Balance Control, Center of Mass, Five-Link Model, IMU, PD Control]
+tags: [Humanoid Robot, Balance Control, Center of Mass, Five-Link Model, IMU, PD Control]
 featured: true
 project_type: research
-demo_url:
+demo_url: https://drive.google.com/file/d/1drUpkeuI3ltxFOQcgkm4NRpHqynZThlo/view?usp=sharing
 repo_url:
 date: 2022-01-13
 ---
 
 ## Project Overview
 
-This project focused on implementing a **balance control system** for the **ERISA humanoid dance robot** used in **Indonesian Dance Robot Contest (KRSTI)**. In KRSTI, robot stability is a key scoring factor because each zone contains different dance motions and transitions that can easily cause the robot to fall.
+This project focused on implementing a **balance control system** for the **ERISA humanoid dance robot**, used in the **Indonesian Dance Robot Contest (KRSTI)**. In KRSTI, robot stability is a key scoring factor — each zone involves different dance motions and transitions that can easily cause a robot to fall.
 
-To stabilize ERISA in several conditions such as during **dancing while walking**, **lifting one leg**, and **stepping onto an obstacle**, I implemented a **closed-loop PD controller** using **pitch feedback** from an IMU sensor, supported by a **Ground Projection of Center of Mass (GCoM)** analysis using a simplified **Five-Link model**.
+To stabilize ERISA under dynamic conditions, I implemented a **closed-loop PD controller** using **pitch feedback** from an IMU sensor, supported by a **Ground Projection of Center of Mass (GCoM)** analysis based on a simplified **Five-Link model**.
 
 ---
 
 ## Robot Specifications
 
-ERISA (EEPIS Robot Intelligent Sense of Art) is a full-body humanoid robot designed for Indonesia traditional dance performance.
+ERISA (EEPIS Robot Intelligent Sense of Art) is a full-body humanoid robot designed for Indonesian traditional dance performance.
 
-- **Degrees of Freedom**: **29 DoF**
+- **Degrees of Freedom**: 29 DoF
 - **Actuators** (4 types):
   - Dynamixel **MX-28** & **AX-12A**
   - Hitec **HS-85MG** & **HS-5055MG**
-- **Main controller**: **STM32F407VGT6**
-- **Balance sensor**: **IMU GY-952** (Euler angle output: roll/pitch/yaw)
+- **Main Controller**: STM32F407VGT6
+- **Balance Sensor**: IMU GY-952
 
 ---
 
 ## System Architecture
 
 ### 1) IMU Measurement & Data Processing (GY-952)
-- The IMU provides **Euler angles** (roll, pitch, yaw).
-- Data is read via **UART/USART** and parsed from binary frames.
-- The system performs **sensor calibration** at startup to set a stable reference.
-- IMU accuracy testing showed low average error (≈ **1.88%** on positive tilt and **2.49%** on negative tilt), supporting its use for feedback control.
+- Provides **Euler angles** (roll, pitch, yaw) via **UART/USART**, parsed from binary frames.
+- **Sensor calibration** is performed at startup to establish a stable reference.
+- Accuracy testing showed low average error (≈ **1.88%** on positive tilt, **2.49%** on negative tilt), confirming suitability for feedback control.
 
-### 2) Stability Variable: GCoM (Ground Projection of CoM)
-To represent robot stability with a simple but meaningful model, the humanoid body was simplified into a **Five-Link model** on the sagittal plane:
+### 2) Motion Planning
+- **Forward Kinematics** is used for hand motion — computing end-effector positions from joint angles to generate expressive arm movements.
+- **Inverse Kinematics** is used for leg motion — computing the required joint angles from desired foot positions to achieve stable and coordinated steps.
 
-- trunk, left thigh, left calf, right thigh, right calf  
-- each link has: length, mass, CoM location  
-- **pitch angle** comes from IMU, while leg joint angles come from the current servo posture.
+### 3) Stability Variable: GCoM (Ground Projection of CoM)
+The humanoid body is simplified into a **Five-Link model** on the sagittal plane — trunk, left thigh, left calf, right thigh, and right calf — where each link has a defined length, mass, and CoM location. Pitch angle comes from the IMU; leg joint angles come from the current servo posture.
 
-The control objective is to keep **GCoM inside the support polygon** to prevent falling.
-
----
-
-<!-- ## Mathematical Approach (Five-Link GCoM)
-
-The GCoM is computed by projecting each link’s CoM onto the ground direction and taking a mass-weighted average: -->
-
-<!-- \[
-GCoM = \frac{\sum m_i x_i}{\sum m_i}
-\]
-
-Where each \(x_i\) is the projected position of each link’s CoM (computed from link geometry and joint angles). The pitch angle from IMU is included in the projection so the estimation reflects real body tilt, not only joint posture. -->
-
-<!-- This GCoM value is used as a **stability indicator** and also as a basis for deciding which strategy should be applied. -->
+The control objective is to keep the **GCoM inside the support polygon** to prevent the robot from falling.
 
 ---
 
 ## Balance Recovery Strategy
 
-This project uses **two recovery strategies**:
+Two recovery strategies are used depending on the magnitude of the disturbance:
 
 ### 1) Ankle Strategy (small disturbances)
-Used when the disturbance is small. The controller mainly corrects posture through ankle-related joints to keep GCoM stable.
+Corrects posture through ankle-related joints to maintain GCoM stability. Used when the disturbance is small.
 
 ### 2) Ankle–Hip Strategy (large disturbances)
-Used when the disturbance is larger (e.g., stepping onto an obstacle). This combines ankle correction with a hip-based reaction to generate stronger stabilization torque and reduce falling risk.
+Combines ankle correction with a hip-based reaction to generate stronger stabilization torque. Used when stepping onto an obstacle or during large perturbations.
 
 ### Strategy Selection (Threshold-Based)
-A threshold is determined empirically:
-- If the stability variable (GCoM / pitch error) is within the “safe” range → **Ankle Strategy**
-- If it exceeds the threshold → **Ankle–Hip Strategy**
+A threshold determined empirically decides the active strategy:
+- GCoM / pitch error **within safe range** → Ankle Strategy
+- GCoM / pitch error **exceeds threshold** → Ankle–Hip Strategy
 
-This prevents overreacting to small disturbances while still handling large disturbances robustly.
+This prevents overreacting to small disturbances while still handling large ones robustly.
 
 ---
 
 ## Control Design (Closed-Loop PD)
 
-ERISA originally behaves like an open-loop motion robot (trajectory + servo commands). To improve stability, I implemented **closed-loop PD control**:
+ERISA originally operates as an open-loop motion robot (trajectory + servo commands). To improve stability, I added a **closed-loop PD controller**:
 
-- **Error**: pitch deviation from IMU reference  
-- **Controller**: PD (P for fast correction, D to damp oscillation)
+- **Error**: pitch deviation from the IMU reference
+- **P term**: fast correction toward the reference
+- **D term**: damps oscillation and overshooting
+
+---
 
 ## Experiments & Results
 
-The system was evaluated under 3 challenging conditions:
+The system was evaluated under three challenging conditions:
 
 1. **Dancing while walking**
 2. **Dancing while lifting one leg**
-3. **Dancing while stepping onto an obstacle (small height)**
+3. **Dancing while stepping onto a small obstacle**
 
-### Key outcomes
-- Without balance control, ERISA easily becomes unstable and can fall during transitions.
-- **Ankle Strategy** improves stability for walking and one-leg motions, but can fail under larger disturbances.
-- **Ankle–Hip Strategy** provides the most robust stabilization across all tested conditions, including obstacle stepping.
+### Key Outcomes
+- Without balance control, ERISA becomes unstable and can fall during transitions.
+- The **Ankle Strategy** improves stability for walking and single-leg motions but may fail under larger disturbances.
+- The **Ankle–Hip Strategy** provides the most robust stabilization across all tested conditions, including obstacle stepping.
+- Forward and inverse kinematics enable **smooth, coordinated dance motion** across all limbs.
 
-Overall, the balance controller successfully **expanded the motion boundary** of ERISA so it can complete dance motions more safely and consistently.
+Overall, the balance controller successfully **expanded the motion boundary** of ERISA, allowing it to complete dance motions more safely and consistently.
 
 ---
 
 ## Technologies Used
-- **Embedded**: STM32F407VGT6, UART/USART, real-time parsing
-- **Sensor**: IMU **GY-952** (Euler angle output)
+- **Embedded**: STM32F407VGT6, UART/USART, real-time frame parsing
+- **Sensor**: IMU GY-952 (Euler angle output)
+- **CAD / Design**: Autodesk Inventor
 - **Actuators**: Dynamixel MX-28 / AX-12A, Hitec servos
 - **Control**: PD control, threshold-based strategy switching
+- **Kinematics**: Forward kinematics (hand motion), Inverse kinematics (leg motion)
 - **Modeling**: Five-Link humanoid simplification, GCoM computation
 - **Tools**: STM32CubeIDE
 
 ---
+
+## Video Demo
+
+<div class="video-embed">
+  <iframe src="https://drive.google.com/file/d/1NcwU1lSWGeTwTKeA4bzw9BXevBlp87dB/preview" allowfullscreen></iframe>
+</div>
+
+---
+
+## Publication
+
+This work was published at the **5th International Conference on Applied Science and Technology on Engineering Science (iCAST-ES 2022)**:
+
+<div class="publication-card">
+  <p class="pub-citation">Surya Nobelia B., Satria N., Henfri Binugroho E. and Fatahillah T. (2022). <strong>Analysis of Stability on the ERISA Humanoid Dance Robot.</strong> In <em>Proceedings of the 5th International Conference on Applied Science and Technology on Engineering Science</em>, Volume 1: iCAST-ES. SciTePress, pages 182–187.</p>
+  <a class="pub-doi" href="https://doi.org/10.5220/0011738400003575" target="_blank" rel="noopener">DOI: 10.5220/0011738400003575 →</a>
+</div>

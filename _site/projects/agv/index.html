@@ -76,107 +76,202 @@
 
 <p>This AGV autonomously transports materials from the warehouse to the production area. The system is designed for efficient operation and safety in an indoor logistics environment.</p>
 
-<p><img src="/pictures/agv.png" alt="AGV" style="width:60%; max-width:520px; height:auto;" /></p>
+<hr />
 
 <h2 id="system-description">System Description</h2>
 
-<p>The AGV operation is built around three key sensing functions:</p>
+<p>The AGV is built around three core sensing functions:</p>
 
-<ul>
-  <li><strong>Line Navigation</strong>: Uses a <strong>Pixy Camera</strong> to detect and follow floor guidance lines.</li>
-  <li><strong>Station/Destination Identification</strong>: Uses an <strong>NFC module</strong> to identify stations and trigger stop/operation logic.</li>
-  <li><strong>Safety</strong>: Uses a <strong>proximity sensor</strong> to detect obstacles and prevent collisions.</li>
-</ul>
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Sensor</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Line Navigation</td>
+      <td>Pixy Camera</td>
+      <td>Detects and follows floor guidance lines</td>
+    </tr>
+    <tr>
+      <td>Station Identification</td>
+      <td>NFC Module</td>
+      <td>Identifies stations and triggers stop/operation logic</td>
+    </tr>
+    <tr>
+      <td>Obstacle Safety</td>
+      <td>Proximity Sensor</td>
+      <td>Detects obstacles and prevents collisions</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>The system is driven by <strong>hoverboard motors</strong>, providing strong traction and torque suitable for carrying materials.</p>
 
+<hr />
+
 <h2 id="hardware-architecture">Hardware Architecture</h2>
 
-<ul>
-  <li><strong>Arduino Mega</strong> as the main controller</li>
-  <li><strong>ESP32</strong> for remote monitoring</li>
-  <li><strong>Pixy Camera</strong>: line detection and tracking</li>
-  <li><strong>NFC module</strong>: station/destination identification</li>
-  <li><strong>Proximity sensor</strong>: obstacle detection for safety control</li>
-  <li><strong>LiPo battery</strong> as a power system</li>
-</ul>
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Arduino Mega</td>
+      <td>Main controller</td>
+    </tr>
+    <tr>
+      <td>ESP32</td>
+      <td>Remote monitoring</td>
+    </tr>
+    <tr>
+      <td>Pixy Camera</td>
+      <td>Line detection and tracking</td>
+    </tr>
+    <tr>
+      <td>NFC Module</td>
+      <td>Station/destination identification</td>
+    </tr>
+    <tr>
+      <td>Proximity Sensor</td>
+      <td>Obstacle detection</td>
+    </tr>
+    <tr>
+      <td>LiPo Battery</td>
+      <td>Power supply</td>
+    </tr>
+    <tr>
+      <td>Hoverboard Motors</td>
+      <td>Main drive actuators</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3 id="actuation">Actuation</h3>
-<ul>
-  <li><strong>Hoverboard motors</strong> as the main drive actuators</li>
-  <li>Motor control behavior optimized with <strong>PID tuning</strong> for smoother response and stability</li>
-</ul>
+<hr />
 
-<h2 id="user-interface-hmi">User Interface (HMI)</h2>
+<h2 id="user-interface">User Interface</h2>
 
 <p>The AGV includes an on-device interface mounted on the panel:</p>
 <ul>
-  <li><strong>Multiple buttons</strong> for user input (e.g., selection / confirmation / navigation)</li>
-  <li>A <strong>small display</strong> on the top area of the panel to <strong>set the destination</strong> before running</li>
+  <li><strong>Buttons</strong> for user input (selection, confirmation, navigation)</li>
+  <li><strong>Small display</strong> to set the destination before running</li>
 </ul>
+
+<hr />
 
 <h2 id="mechanical-design">Mechanical Design</h2>
 
 <ul>
-  <li><strong>Trolley</strong> as a platform to carry the materials to be delivered.</li>
-  <li><strong>3D-printed mounting bracket for the NFC module</strong>, ensuring stable alignment and reliable tag reading</li>
-  <li><strong>Panel design</strong> to house the interface components and wiring organization</li>
+  <li><strong>Trolley</strong> platform for carrying delivered materials</li>
+  <li><strong>3D-printed NFC mounting bracket</strong> for stable alignment and reliable tag reading</li>
+  <li><strong>Panel design</strong> to organize interface components and wiring</li>
 </ul>
 
-<p><img src="/pictures/agv_circuit.jpg" alt="AGV" style="width:40%; max-width:520px; height:auto;" /></p>
+<hr />
 
 <h2 id="control--tuning">Control &amp; Tuning</h2>
 
-<h3 id="pid-tuning">PID Tuning</h3>
-
-<p>The AGV control performance was improved by iterative tuning of <strong>PID parameters</strong>, focusing on:</p>
-
+<p>PID parameters were iteratively tuned to achieve:</p>
 <ul>
-  <li>More stable line-following behavior</li>
-  <li>Better response to speed changes and load conditions</li>
-  <li>Smooth station starting &amp; stopping behavior</li>
+  <li>Stable line-following behavior</li>
+  <li>Smooth response to speed changes and load conditions</li>
+  <li>Consistent station start/stop behavior</li>
 </ul>
+
+<hr />
 
 <h2 id="integration--troubleshooting">Integration &amp; Troubleshooting</h2>
 
-<p>During integration and testing, several issues were addressed to ensure stable operation:</p>
+<p>During integration and testing, the following were addressed:</p>
+<ul>
+  <li>Sensor calibration for reliable navigation and detection</li>
+  <li>Wiring improvements to reduce noise and intermittent connections</li>
+  <li>Mechanical fixes for stable sensor alignment and mounting</li>
+  <li>Destination selection workflow verification via the on-device interface</li>
+</ul>
+
+<hr />
+
+<h2 id="key-responsibilities">Key Responsibilities</h2>
 
 <ul>
-  <li>Sensor calibration for reliable navigation and consistent detection</li>
-  <li>Wiring improvements to reduce noise and prevent intermittent connections</li>
-  <li>Mechanical fixes to ensure alignment and stable sensor mounting</li>
-  <li>Verification of destination selection workflow through the on-device interface</li>
+  <li>Analyzed and calibrated the system for proper AGV operation.</li>
+  <li>Enhanced AGV features for optimal performance.</li>
+  <li>Fine-tuned <strong>PID parameters</strong> to optimize control performance.</li>
+  <li>Implemented <strong>ESP32-based remote monitoring</strong> for operational visibility.</li>
+  <li>Addressed wiring and mechanical issues during integration.</li>
+  <li>Contributed to <strong>mechanical design</strong> (trolley, NFC mount, panel layout).</li>
 </ul>
+
+<hr />
 
 <h2 id="technologies-used">Technologies Used</h2>
-
 <ul>
-  <li><strong>Arduino Mega</strong> (main controller)</li>
-  <li><strong>ESP32</strong> (remote monitoring / telemetry)</li>
-  <li><strong>Pixy Camera</strong> (line navigation)</li>
-  <li><strong>NFC module</strong> (station/destination identification)</li>
-  <li><strong>Proximity sensor</strong> (safety)</li>
-  <li><strong>Buttons + small display</strong> (destination selection interface)</li>
-  <li><strong>PID control</strong> (motion/control tuning)</li>
-  <li><strong>Hoverboard motors</strong> (actuation)</li>
-  <li><strong>Mechanical design</strong> (trolley, NFC mount, panel)</li>
+  <li><strong>Controllers</strong>: Arduino Mega (main), ESP32 (monitoring)</li>
+  <li><strong>Sensors</strong>: Pixy Camera, NFC module, proximity sensor</li>
+  <li><strong>Actuation</strong>: Hoverboard motors</li>
+  <li><strong>Control</strong>: PID tuning</li>
+  <li><strong>Interface</strong>: Push buttons, small display</li>
+  <li><strong>Mechanical</strong>: 3D-printed parts, trolley, panel</li>
 </ul>
 
-<h2 id="jobdesk--contributions">Jobdesk / Contributions</h2>
-
-<ul>
-  <li>Analyzed and calibrated the system to ensure proper AGV operation.</li>
-  <li>Enhanced AGV features for optimal performance.</li>
-  <li>Addressed wiring and mechanical issues during integration.</li>
-  <li>Fine-tuned <strong>PID parameters</strong> to optimize control performance.</li>
-  <li>Implemented/assisted <strong>ESP32-based remote monitoring</strong> for operational visibility.</li>
-  <li>Contributed to <strong>mechanical design</strong> (rack, NFC mounting, and panel/interface layout).</li>
-</ul>
-
-<h2 id="video-demo">Video Demo</h2>
+<hr />
 
         </div>
         
+        
+        <div class="project-gallery">
+            <h2 class="gallery-title">Gallery</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/agv.png', 'AGV Unit')">
+                    <img src="/pictures/agv.png" alt="AGV Unit">
+                    
+                    <div class="gallery-caption">AGV Unit</div>
+                    
+                </div>
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/agv_circuit.jpg', 'Electrical Panel & Wiring')">
+                    <img src="/pictures/agv_circuit.jpg" alt="Electrical Panel & Wiring">
+                    
+                    <div class="gallery-caption">Electrical Panel & Wiring</div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+            <div class="lightbox-content" onclick="event.stopPropagation()">
+                <img id="lightbox-img" src="" alt="">
+                <p id="lightbox-caption"></p>
+            </div>
+        </div>
+
+        <script>
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption || '';
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+        </script>
         
         
         <div class="project-links">
@@ -186,7 +281,7 @@
                     <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                     <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                 </svg>
-                Live Demo
+                Video Demo
             </a>
             
             

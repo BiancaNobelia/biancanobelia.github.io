@@ -2,9 +2,9 @@
 title: Mechanical Design
 description: Design new products, calculate production costs, source suppliers, and build/test jigs for mass production.
 cover_image: /pictures/mcb.png
-tags: [3D Modelling, Creo, Technical Drawing, Mass Production, 3D Print, Milling Machine]
+tags: [3D Modelling, Creo, Autodesk Inventor, Drawing, Mass Production, 3D Print, Milling Machine]
 featured: true
-project-type: full-time
+project_type: full-time
 demo_url: 
 repo_url: 
 date: 2023-09-15
@@ -25,27 +25,74 @@ gallery:
     caption: Electronic Overcurrent Protection
 ---
 
-## Overview
-This project focused on developing new products and preparing them for mass production — from initial concept design through prototyping, cost estimation, and production validation.
+## Project Overview
+
+This project focused on developing new products and preparing them for mass production — from initial concept design through prototyping, cost estimation, and production validation. Products developed include electrical connectors, sockets, locking accessories, and electronic protection devices.
+
+---
 
 ## Key Responsibilities
-- Designed 3D CAD models and 2D technical drawings for manufacturing using **Creo**.
-- Evaluated design feasibility for molds and dies, assessing whether existing tooling was capable of meeting production requirements.
-- Estimated costs for new **molds and dies** required for the manufacturing process.
-- Created prototypes using Resin 3D printing and milling machines.
-- Coordinated with suppliers to source components and compare quotations.
-- Built and tested **jigs and fixtures** to validate assembly and manufacturing processes.
-- Supported production readiness through manufacturability reviews and design improvements.
+
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CAD Design</td>
+      <td>Designed 3D models and 2D technical drawings for manufacturing using Creo and Autodesk Inventor</td>
+    </tr>
+    <tr>
+      <td>Tooling Feasibility</td>
+      <td>Evaluated mold and die feasibility, assessing whether existing tooling met production requirements</td>
+    </tr>
+    <tr>
+      <td>Cost Estimation</td>
+      <td>Estimated costs for new molds and dies required for the manufacturing process</td>
+    </tr>
+    <tr>
+      <td>Prototyping</td>
+      <td>Created prototypes using resin 3D printing and milling machines</td>
+    </tr>
+    <tr>
+      <td>Supplier Coordination</td>
+      <td>Coordinated with suppliers to source components and compare quotations</td>
+    </tr>
+    <tr>
+      <td>Jigs & Fixtures</td>
+      <td>Built and tested jigs and fixtures to validate assembly and manufacturing processes</td>
+    </tr>
+    <tr>
+      <td>Production Readiness</td>
+      <td>Supported manufacturability reviews and design improvements for mass production</td>
+    </tr>
+  </tbody>
+</table>
+
+---
 
 ## Technologies Used
-- **CAD / Design:** PTC Creo (3D modelling & 2D drawings)
-- **Manufacturing / Prototyping:** 3D printing (FDM & Resin), milling machine
 
-<!-- ## Projects Gallery
-- Miniature company (/pictures/miniature.png)
-- Wire peeler simulation for new blade design (/pictures/wire_peeler.png)
-- Combined C13/C19 connector (/pictures/connector.png)
-- Multiple combined socket (/pictures/connector1.png)
-- Locking accessory combined socket (/pictures/connector2.png)
-- Electronic Power Relay (/pictures/mcb.png)
-- Electronic Overcurrent Protection (/pictures/mcb1.png) -->
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Tools / Methods</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CAD / Design</td>
+      <td>PTC Creo, Autodesk Inventor (3D modelling &amp; 2D drawings)</td>
+    </tr>
+    <tr>
+      <td>Prototyping</td>
+      <td>3D printing (FDM &amp; Resin), milling machine</td>
+    </tr>
+  </tbody>
+</table>
+
+---

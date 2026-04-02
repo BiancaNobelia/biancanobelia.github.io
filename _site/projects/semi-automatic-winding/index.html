@@ -74,46 +74,145 @@
         <div class="project-content">
             <h2 id="project-overview">Project Overview</h2>
 
-<p>This project is a <strong>semi-automatic winding machine</strong> designed to combine two production processes—<strong>winding</strong> and <strong>insulation stripping</strong>—to increase production output and reduce labor costs. The system integrates servo motion control and pneumatic actuation, supported by an HMI for operator control and parameter configuration.</p>
+<p>This project is a <strong>semi-automatic winding machine</strong> designed to combine two production processes — <strong>winding</strong> and <strong>insulation stripping</strong> — into a single machine to increase production output and reduce labor costs. The system integrates servo motion control and pneumatic actuation, supported by an HMI for operator control and parameter configuration.</p>
 
-<p><img src="/pictures/winding.jpg" style="width:50%; max-width:520px; height:auto;" /></p>
+<hr />
 
 <h2 id="system-description">System Description</h2>
 
 <p>The machine performs two main operations:</p>
 
-<ul>
-  <li><strong>Winding</strong>: A <strong>Panasonic servo motor</strong> drives the winding process with controllable speed/position.</li>
-  <li><strong>Insulation stripping</strong>: A <strong>Festo double-acting cylinder</strong> performs the stripping motion.</li>
-</ul>
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th>Actuator</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Winding</td>
+      <td>Panasonic Servo Motor</td>
+      <td>Drives the winding process with controllable speed and position</td>
+    </tr>
+    <tr>
+      <td>Insulation Stripping</td>
+      <td>Festo Double-Acting Cylinder</td>
+      <td>Performs the stripping motion via pneumatic actuation</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>A <strong>Weintek HMI</strong> is used for user operation and monitoring. Communication between the <strong>servo drive</strong> and <strong>HMI</strong> is established via <strong>RS232/RS485</strong>, enabling basic command, parameter handling, and operational status monitoring.</p>
+<p>A <strong>Weintek HMI</strong> is used for operator control and monitoring. Communication between the <strong>servo drive</strong> and <strong>HMI</strong> is established via <strong>RS232/RS485</strong>, enabling command handling, parameter configuration, and operational status monitoring.</p>
+
+<hr />
 
 <h2 id="hardware-components">Hardware Components</h2>
 
-<ul>
-  <li><strong>Panasonic servo motor + servo drive</strong> (winding actuation)</li>
-  <li><strong>Festo double-acting cylinder</strong> (insulation stripping actuation)</li>
-  <li><strong>Weintek HMI</strong> (operator interface)</li>
-  <li><strong>RS232 / RS485 communication</strong> (servo drive ↔ HMI communication)</li>
-  <li>Electrical control panel (wiring, protection, and integration)</li>
-</ul>
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Panasonic Servo Motor + Drive</td>
+      <td>Winding actuation</td>
+    </tr>
+    <tr>
+      <td>Festo Double-Acting Cylinder</td>
+      <td>Insulation stripping actuation</td>
+    </tr>
+    <tr>
+      <td>Weintek HMI</td>
+      <td>Operator interface</td>
+    </tr>
+    <tr>
+      <td>RS232 / RS485</td>
+      <td>Servo drive ↔ HMI communication</td>
+    </tr>
+    <tr>
+      <td>Electrical Control Panel</td>
+      <td>Wiring, protection, and component integration</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><img src="/pictures/winding_circuit.jpg" alt="winding" style="width:50%; max-width:520px; height:auto;" /></p>
+<hr />
 
-<h2 id="jobdesk--contributions">Jobdesk / Contributions</h2>
+<h2 id="key-responsibilities">Key Responsibilities</h2>
 
 <ul>
   <li>Analyzed, calculated, and configured parameters for the <strong>Panasonic servo drive</strong>.</li>
-  <li>Diagnosed, troubleshot, and maintained <strong>mechanical</strong> and <strong>system</strong> failures during commissioning.</li>
-  <li>Established communication between the <strong>servo drive</strong> and <strong>Weintek HMI</strong> using <strong>RS232/RS485</strong>.</li>
-  <li>Replicated the system using <strong>Festo servo drive and motor</strong> as an alternative setup.</li>
+  <li>Established <strong>RS232/RS485 communication</strong> between the servo drive and Weintek HMI.</li>
+  <li>Diagnosed and resolved mechanical and system failures during commissioning.</li>
+  <li>Replicated the system using a <strong>Festo servo drive and motor</strong> as an alternative setup.</li>
 </ul>
 
-<h2 id="video-demo">Video Demo</h2>
+<hr />
+
+<h2 id="technologies-used">Technologies Used</h2>
+<ul>
+  <li><strong>Servo System</strong>: Panasonic servo motor + drive</li>
+  <li><strong>Pneumatics</strong>: Festo double-acting cylinder</li>
+  <li><strong>HMI</strong>: Weintek</li>
+  <li><strong>Communication</strong>: RS232 / RS485</li>
+  <li><strong>Electrical</strong>: Control panel wiring and integration</li>
+</ul>
+
+<hr />
 
         </div>
         
+        
+        <div class="project-gallery">
+            <h2 class="gallery-title">Gallery</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/winding.jpg', 'Semi-automatic Winding Machine')">
+                    <img src="/pictures/winding.jpg" alt="Semi-automatic Winding Machine">
+                    
+                    <div class="gallery-caption">Semi-automatic Winding Machine</div>
+                    
+                </div>
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/winding_circuit.jpg', 'Electrical Panel & Wiring')">
+                    <img src="/pictures/winding_circuit.jpg" alt="Electrical Panel & Wiring">
+                    
+                    <div class="gallery-caption">Electrical Panel & Wiring</div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+            <div class="lightbox-content" onclick="event.stopPropagation()">
+                <img id="lightbox-img" src="" alt="">
+                <p id="lightbox-caption"></p>
+            </div>
+        </div>
+
+        <script>
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption || '';
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+        </script>
         
         
         <div class="project-links">
@@ -123,7 +222,7 @@
                     <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                     <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                 </svg>
-                Live Demo
+                Video Demo
             </a>
             
             

@@ -8,47 +8,86 @@ project_type: internship
 demo_url: https://drive.google.com/file/d/1vjVBOgTVrI5Ibc4cHMgSGH2soXayvMAt/view?usp=sharing
 repo_url:
 date: 2022-07-01
+gallery:
+  - image: /pictures/charger.jpg
+    caption: EV Charger Unit
+  - image: /pictures/hmi2.png
+    caption: HMI Screen — HMIGXU5512 (Schneider Electric)
+  - image: /pictures/hmi.png
+    caption: HMI Screen — X2 Base 7 (Beijer Electronics)
+  - image: /pictures/ev_bus2.jpg
+    caption: Electric Vehichle Bus
+  - image: /pictures/ev_bus3.jpg
+    caption: EV Charger Installation
+  - image: /pictures/hmi.jpg
+    caption: Designing HMI
 ---
 
 ## Project Overview
 
-This project is part of the development of an **Electric Vehicle (EV) Charger**. The focus was to build a **monitoring and operation interface** using a **Human Machine Interface (HMI)** to improve usability and make the EV charger easier to operate.
+This project was part of the development of an **Electric Vehicle (EV) Charger**. The focus was to build a **monitoring and operation interface** using a **Human Machine Interface (HMI)** to improve usability and make the EV charger easier to operate.
 
-<img src="/pictures/charger.jpg" style="width:50%; max-width:520px; height:auto;">
+---
 
 ## System Description
 
 The HMI system supports:
 
-- Charging-process monitoring (status, progress, key parameters)
-- Payment method management
-- Fault detection and visualization
-- Improved user operation flow for the EV charger
+- **Charging process monitoring** — real-time status, progress, and key parameters
+- **Payment method management** — handling different payment flows
+- **Fault detection and visualization** — displaying error states for operator response
+- **Streamlined operation flow** — guiding users through the charging process
+
+---
 
 ## Communication
 
-A communication program was implemented between the **EV charger controller** and the **HMI** using **RS485**, enabling reliable send/receive of operational data and status information.
+RS485 communication was implemented between the **EV charger controller** and the **HMI**, enabling reliable bidirectional data transfer of operational status and control commands.
+
+---
 
 ## HMI Screen Design
 
-HMI screens were designed and implemented for:
+HMI screens were designed and implemented for two hardware platforms:
 
-- HMIGXU5512 (Schneider Electric)
-<img src="/pictures/hmi2.jpg" style="width:50%; max-width:520px; height:auto;">
-- X2 Base 7 (Beijer Electronics)
-<img src="/pictures/hmi.jpg" style="width:50%; max-width:520px; height:auto;">
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>Manufacturer</th>
+      <th>Programming Software</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HMIGXU5512</td>
+      <td>Schneider Electric</td>
+      <td>EcoStruxure Operator Terminal Expert</td>
+    </tr>
+    <tr>
+      <td>X2 Base 7</td>
+      <td>Beijer Electronics</td>
+      <td>IX Developer</td>
+    </tr>
+  </tbody>
+</table>
 
-## Jobdesk / Contributions
+Each screen was tailored to the hardware's resolution and input method, covering all monitoring, payment, and fault-display pages.
 
-- Built a program to control the HMI display for EV charger operation, including payment management, charging monitoring, and fault detection.
-- Implemented RS485 communication between the EV charger controller and the HMI.
-- Designed and integrated HMI screens for **HMIGXU5512** and **X2 Base 7**.
-- Successfully verified data transmission (send/receive) between controller and HMI.
+---
 
-## Documentations
+## Key Responsibilities
 
-<img src="/pictures/ev_bus2.jpg" style="width:50%; max-width:520px; height:auto;">
-<img src="/pictures/hmi.jpg" style="width:50%; max-width:520px; height:auto;">
-<img src="/pictures/ev_bus3.jpg" style="width:50%; max-width:520px; height:auto;">
+- Designed and programmed HMI screens for **HMIGXU5512** (Schneider) and **X2 Base 7** (Beijer Electronics).
+- Implemented **RS485 communication** between the EV charger controller and the HMI.
+- Built display logic for charging monitoring, payment management, and fault detection.
+- Verified bidirectional data transmission between controller and HMI.
 
-## Video Demo
+---
+
+## Technologies Used
+- **HMI Platforms**: Schneider HMIGXU5512, Beijer Electronics X2 Base 7
+- **Communication**: RS485
+- **Software**: EcoStruxure Operator Terminal Expert (Schneider), IX Developer (Beijer)
+
+---

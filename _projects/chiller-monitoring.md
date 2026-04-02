@@ -2,42 +2,76 @@
 title: Chiller Monitoring (IoT)
 description: IoT-based monitoring system for a chiller. Monitors chiller input/output temperatures using thermocouple sensors, observes chiller status, compressor, and water pump, and displays data on a website via Wi-Fi. 
 cover_image: /pictures/chiller.png
-tags: [IoT, ESP32, Thermocouple, Temperature Sensing, Wi-Fi, Web Dashboard]
+tags: [IoT, ESP32, Temperature Sensing, Wi-Fi, Web Dashboard]
 featured: false
 project_type: full-time
 demo_url: 
 repo_url:
 date: 2023-02-01
+gallery:
+  - image: /pictures/chiller.png
+    caption: Chiller Unit
+  - image: /pictures/chiller_circuit.png
+    caption: Electrical Panel & Wiring
 ---
 
 ## Project Overview
 
-This project develops an **IoT monitoring system** for a **chiller**. The system measures the **input and output temperatures** and monitors the **on/off status** of key components. All data is sent over **Wi-Fi** and displayed on a **website** for easy monitoring.
+This project develops an **IoT monitoring system** for a **chiller**. The system measures the **input and output temperatures** and monitors the **on/off status** of key components. All data is transmitted over **Wi-Fi** and displayed on a **web dashboard** for remote monitoring.
 
-<img src="/pictures/chiller.png" alt="chiller" style="width:60%; max-width:520px; height:auto;">
+---
 
 ## System Description
 
-The monitoring system covers:
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Temperature</td>
+      <td>Chiller inlet &amp; outlet via thermocouple sensors</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>On/off state of chiller, compressor, and water pump</td>
+    </tr>
+    <tr>
+      <td>Connectivity</td>
+      <td>Wi-Fi data transmission to web dashboard</td>
+    </tr>
+  </tbody>
+</table>
 
-- **Temperature Monitoring**: Measures chiller inlet/outlet temperatures using **thermocouple sensors**.
-- **Status Monitoring**: Observes the on/off state of the **chiller**, **compressor**, and **water pump**.
-- **Web Display**: Sends data via **Wi-Fi** and visualizes it on a **website/dashboard** for remote viewing.
+---
 
 ## Hardware & Implementation
 
-- **Controller**: ESP32 / ESP8266
-- **Sensors**: Thermocouple sensors for temperature measurements
-- **SSR + relay**: interface to safely switch/handle load-side signals
-- **Connectivity**: Wi-Fi data transmission to a web-based display
+- **Microcontroller**: ESP32 / ESP8266
+- **Sensors**: Thermocouple sensors for inlet/outlet temperature measurement
+- **Switching**: SSR + relay for safe load-side signal interfacing
+- **Connectivity**: Wi-Fi data transmission to a web-based dashboard
 - **Electrical Panel**: Full wiring and component integration inside a control panel
 
-<img src="/pictures/chiller_circuit.png" alt="chiller" style="width:60%; max-width:520px; height:auto;">
+---
 
-## Jobdesk / Contributions
+## Key Responsibilities
 
-- Designed and developed the Internet of Things (IoT) monitoring system.
-- Created the embedded program using ESP32/ESP8266.
+- Designed and developed the full IoT monitoring system.
+- Wrote the embedded firmware using ESP32/ESP8266.
 - Performed soldering, component installation, and electrical panel wiring.
-- Conducted troubleshooting and maintenance of the system.
-- Implemented Wi-Fi data transmission to the website/dashboard.
+- Implemented Wi-Fi data transmission to the web dashboard.
+- Conducted troubleshooting and system maintenance.
+
+---
+
+## Technologies Used
+- **Microcontroller**: ESP32 / ESP8266
+- **Sensors**: Thermocouple (temperature), relay/SSR (status detection)
+- **Communication**: Wi-Fi
+- **Interface**: Web dashboard
+
+---

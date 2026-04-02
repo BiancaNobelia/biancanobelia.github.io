@@ -1,220 +1,132 @@
 ---
 layout: page
 title: Resume
-subtitle: Electronics Engineer | Robotics Specialist | Embedded Systems Developer
+subtitle: Mechanical & Robotics Engineer | System Integration | Industrial Automation
 permalink: /resume/
 ---
 
 ## Professional Summary
 
-A highly motivated electronics engineer with 3+ years of experience in robotics, embedded systems, and FPGA development. Proven track record in avionics, automotive, and marine technology sectors with expertise in ROS/ROS2, computer vision, and control systems. Successfully delivered critical projects for military applications and electric vehicle systems.
-
----
-
-## Technical Skills
-
-### Programming & Development
-**Languages:** C/C++, Python, Embedded C, C#, VHDL/Verilog, MATLAB, Shell Scripting  
-**Robotics:** ROS/ROS2, URDF/Xacro, Gazebo, CoppeliaSim  
-**Web & IoT:** HTML, CSS, JavaScript, Node.js, RESTful API, MQTT, PyQT
-
-### Embedded & Hardware
-**FPGA Tools:** Xilinx ISE, Vivado, Vitis, Gowin EDA  
-**Microcontrollers:** STM32, Texas Instruments Hercules, National Instruments MyRio  
-**IDEs:** STM32CubeIDE, Code Composer Studio, ArduinoIDE, PlatformIO  
-**Protocols:** CAN Bus, I2C, I2S, SPI, UART, USB
-
-### Electronics & PCB Design
-**ECAD Tools:** KiCAD, EasyEDA, Autodesk Eagle, LTSpice, PSpice, Proteus  
-**CAD/3D:** Autodesk Inventor, FreeCAD, SolidWorks, CURA
-
-### AI & Computer Vision
-**Frameworks:** TensorFlow, TensorFlow Lite, Keras, CUDA  
-**Libraries:** OpenCV, PCL (Point Cloud Library)  
-**Specialization:** CNN, Image Segmentation, Edge AI, Edge Unsupervised Learning
-
-### Industrial Automation
-**PLC:** Omron, Siemens (Ladder Diagram)  
-**Simulation:** Festo Fluidsim, Siemens TIA Portal  
-**HMI:** LabVIEW
-
-### Development Tools
-**Version Control:** Git, GitHub, GitLab  
-**Containerization:** Docker  
-**Testing:** Oscilloscope, Logic Analyzer, Vector CANalyzer, Wireshark  
-**Project Management:** Trello, Hoddo
-
----
-
-## Professional Experience
-
-### PT. Reka Inovasi Cerdas
-**Electronics & Embedded Systems Engineer**  
-*April 2025 – August 2025*
-
-- Designed and developed CNC Laser Cutting system with precise motion control
-- Engineered LoRa IoT device for long-range wireless communication and data monitoring
-- Conducted reverse engineering of valve turbine components for system optimization
-- Implemented embedded control systems for industrial automation
-- Created technical documentation and system specifications
-
-**Key Achievement:** Successfully delivered three major projects meeting client specifications and industrial standards
-
----
-
-### PT. Genesis Technology Indonesia
-**Production Maintenance Technician – Contract**  
-*September 2024 – January 2025*
-
-- Led a team of machine operators in a high-volume production line
-- Provided comprehensive training to new employees on machine operation, maintenance protocols, and safety procedures
-- Coordinated machine installations based on technical drawings, directing forklift operations
-- Managed maintenance schedules ensuring 99%+ uptime
-- Troubleshot and resolved production machine issues, minimizing downtime
-- Installed electrical panels and programmed PLCs (Siemens TIA Portal)
-- Installed and maintained pneumatic systems
-- Prepared detailed monthly reports for management review
-
-**Key Achievement:** Successfully reduced machine downtime by 30% through proactive maintenance scheduling
-
----
-
-### PT. Infoglobal Teknologi Semesta
-**Electronic Engineer – Contract**  
-*October 2022 – April 2024*
-
-#### Key Projects & Achievements:
-
-**Hawk-100 Rear Cockpit Monitor (RCM)**
-- Designed schematics and PCB layout for military-grade avionics display system
-- Implemented high-speed DDR-SDRAM interface for video processing
-- Programmed FPGA using VHDL for digital video processing
-- **Achievement:** 66% reduction in video processing time
-- Built comprehensive test equipment for quality assurance
-- Met all military standards (MIL-STD) compliance requirements
-
-**CAKRA-401 Submarine Electronic Data Display (EDD)**
-- Conducted reverse engineering of 1980s German analog video system
-- Analyzed non-standard analog video signals using oscilloscopes
-- Designed modern replacement using FPGA and LCD technology
-- Successfully replicated functionality while reducing size and weight by 40%
-- Ensured compatibility with existing submarine systems
-
-**CN235-220 Aircraft Component Maintenance**
-- Diagnosed and repaired avionics components
-- Provided technical documentation and specifications for system discussions
-- Upgraded avionics features through prototyping and testing
-
-**Technical Contributions:**
-- Managed version control for multiple projects using GitLab
-- Created comprehensive technical documentation
-- Collaborated with cross-functional teams for system integration
-
----
-
-### PT. Industri Kereta Api (Persero) - INKA
-**Embedded Programmer – Intern**  
-*February 2022 – July 2022*
-
-**Merah Putih Electric Bus - Vehicle Control Unit (VCU)**
-- Developed complete VCU firmware from concept to deployment
-- Configured I/O using HalCoGen, programmed state machines in C
-- Implemented CAN bus communication protocol for vehicle subsystems
-- Designed and built VCU test jig for safe algorithm validation
-- Created comprehensive firmware documentation
-
-**Key Achievements:**
-- **Highest score** in Certified Internship and Independent Study Program Batch II
-- Successfully deployed system for **G20 Summit 2022**
-- Contributed to achieving 40%+ Domestic Component Level (TKDN)
-- Completed project from design phase to road testing within tight deadline
-
----
-
-## Organizational Experience
-
-### EEPIS Robot Soccer (EROS)
-**Humanoid Robot Team – Co-Leader, Programmer, Electrical Design**  
-*November 2019 – November 2021*
-
-**Technical Contributions:**
-- Developed 20 DoF humanoid robot with dynamic walking capability
-- Programmed soccer strategy algorithms in ROS framework
-- Designed PCB schematics and layouts for sub-controllers (STM32)
-- Implemented kinematics and dynamics analysis for walking system
-- Developed URDF model for digital twin simulation
-
-**Key Achievements:**
-- **68% reduction** in Center of Mass (CoM) error from ZMP reference
-- Improved maneuver system by implementing footstep planner
-- Applied control methods for humanoid robot reflex systems
-- Analyzed and optimized walking gait patterns
-
-**Skills Developed:**
-- ROS/ROS2, OpenCV, C++, Python
-- URDF modeling and Gazebo simulation
-- TCP/IP, UDP communication
-- Docker containerization
-- STM32 embedded programming
-
----
-
-### HIMA ELKA PENS
-**Electronics Engineering Student Association – Research and Technology Staff**  
-*October 2019 – December 2020*
-
-- Organized training, workshops, and seminars for student development
-- Prepared laboratories and facilitated student participation in competitions
-- Coordinated with faculty for ongoing research projects
-- Managed project timelines using Trello
+Demonstrates a strong self-motivation and diligent work ethic, adept at performing under pressure within strict timelines, proficient in working collaboratively as a team, possesses a strong drive and enthusiasm for learning, exhibits excellent communication skills, and holds prior experience in the field of research and development. Fluent in both Bahasa and English languages.
 
 ---
 
 ## Education
 
-**Tokyo Metropolitan University**  
-Master of Engineering - Mechanical System Engineering  
-*October 2025 – September 2027 (Expected)*
+**Tokyo Metropolitan University** <span class="resume-date">Oct 2024 – Sep 2026</span>
 
-**Politeknik Elektronika Negeri Surabaya (PENS)**  
-Electronics Engineering  
-*2019 – 2022*
+*Master's degree — Mechanical Systems Engineering*  
 
----
+**Electronic Engineering Polytechnic Institute of Surabaya (EEPIS)** <span class="resume-date">Jul 2018 – Aug 2022</span>
 
-## Key Projects
-
-### 2024
-- **MPC on Ackermann Drive Robot** - Autonomous navigation with Lidar-based obstacle avoidance
-
-### 2023
-- **CAKRA-401 Submarine Console** - Reverse engineering military submarine display system
-- **Hawk-100 RCM** - Military-grade cockpit display with FPGA processing (66% faster)
-- **Wave Run-up CNN** - Real-time measurement system with 94% accuracy
-- **Sound Recognition System** - Motor fault detection on STM32 (88.3% accuracy)
-
-### 2022
-- **Humanoid Robot Digital Twin** - Real-time CoM projection (68% error reduction)
-- **Electric Bus VCU** - Complete firmware for G20 Summit deployment
-
-### 2021
-- **3D Tracking Lidar** - Perception system using ROS and PCL
+*Bachelor of Applied Engineering — Mechatronics Engineering | GPA 3.84/4*   
+- Final Project: Implementation of Balance Control System on the ERISA Humanoid Dance Robot
 
 ---
 
-## Certifications & Achievements
+## Professional Experience
 
-- **Highest Score** - Certified Internship Program Batch II (PT. INKA)
-- Multiple national robotics competition participations
-- Published research on humanoid robot walking control
+### PT. E-T-A Indonesia
+
+**Mechanical Engineer – Full-time** <span class="resume-date">Oct 2023 – Aug 2024</span>
+- Demonstrated proficiency in operating filament and resin-based 3D printing systems, milling machines, and other mechanical tools.
+- Designed and analyzed the mechanical design for a new product in collaboration with E-T-A Germany using Creo and Autodesk Inventor.
+- Calculated the estimated cost for new molds and dies for the manufacturing process.
+
+> **Key Achievement:** Successfully collaborated with E-T-A Germany to deliver new product designs ready for mass production.
+
+**Robotic Engineer – Full-time** <span class="resume-date">Feb 2023 – Sep 2023</span>
+- Optimized and maintained the Automatic Guided Vehicle (AGV) system while fine-tuning the PID parameters for peak performance.
+- Programmed and controlled Panasonic and Festo servo drives via RS232/RS485 communication using HMI.
+- Resolved intricate issues in pneumatic and electrical systems to diagnose and repair mechanical and electrical faults.
+- Developed procedural documents and established protocols to ensure adherence to contractual and regulatory requirements.
+
+> **Key Achievement:** Successfully optimized AGV performance, improving autonomous transport reliability & safety in the production line.
+
+---
+
+### PT. Yanasurya Bhaktipersada
+
+**Mechatronics Specialist – Full-time** <span class="resume-date">Nov 2022 – Feb 2023</span>
+- Designed and adapted factory machines to facilitate the deployment of Industrial Internet of Things (IIoT).
+- Developed and implemented a monitoring system for chiller and molding machines to monitor vital machine parameters, including tank volume, temperature, and pressure, and displayed the data on the company's website.
+
+> **Key Achievement:** Delivered a fully operational IIoT monitoring system for factory machines, enabling real-time remote monitoring via the company's website.
+
+---
+
+### PT. Industri Kereta Api (Persero)
+
+**Research and Development – Intern** <span class="resume-date">Feb 2022 – Jul 2022</span>
+- Built a program to control the communication between the Electric Vehicle Charger and DC Power Module using an STM32 microcontroller via the CAN-bus protocol.
+- Designed and programmed an HMI display to control the Electric Vehicle Charger using HMIGXU5512 (Schneider) and X2 Base 7 (Beijer Electronics).
+- Designed and developed a GUI to display data transmitted over UART communication from two STM32 Discovery boards using .NET Framework C#.
+
+> **Key Achievement:** Successfully implemented CAN-bus communication and dual-platform HMI for an EV charger system.
+
+---
+
+### PT. Karunia Prima Engineering
+
+**Technician and Engineer – Intern** <span class="resume-date">Jan 2021 – Apr 2021</span>
+- Assembled an electrical control panel, including wiring schematics, and conducted integrated testing with factory equipment such as actuators, sensors, and motors.
+- Designed an HMI display to provide control and monitoring capabilities for the factory equipment.
+
+> **Key Achievement:** Independently assembled and tested a complete electrical control panel integrated with factory automation equipment.
+
+---
+
+## Organization & Certification
+
+**PLC-Based Electronic Equipment Operation Certification** <span class="resume-date">Sept 2023 – Sept 2026</span>  
+*National Professional Certification Agency (BNSP)*
+
+> **Key Achievement:** One of the best participants among 47 participants.
+
+---
+
+**EEPIS Robot Intelligent in Sense of Art (ERISA) Team** <span class="resume-date">Oct 2019 – Oct 2021</span>  
+*Team Leader & Programmer*
+- Organized a research team, facilitated regular meetings, formulated a research roadmap, and offered strategic direction, leading to substantial achievement of research objectives.
+- Developed a balance control system, designed dance motions and walking paths using forward and inverse kinematics, and enhanced the robot's communication system with Bluetooth technology.
+- Produced a comprehensive research report published at an international conference.
+
+> **Key Achievement:** Won 1st Place at the National Dance Robot Contest two years in a row.
+
+---
+
+## Technical Skills
+
+**Programming:** C/C++, Python, C#  
+**Embedded Systems:** ST Microcontroller, ESP Microcontroller, Arduino  
+**Web Programming:** HTML, PHP, JavaScript  
+**Desktop Programming:** .NET  
+**HMI Programming:** Weintek, Omron, Schneider, Beijer Electronics  
+**PLC Programming:** Omron  
+**Pneumatics:** Festo  
+**3D Design:** Autodesk Inventor, Creo  
+**Machining:** Milling, FDM and Resin-based 3D Print  
+**Electrical Design:** Autodesk Eagle, KiCad, AutoCAD  
+**Version Control:** GitHub  
+**Non-technical:** Public speaking, Problem-solving, Organizational, Collaborating, Writing
 
 ---
 
 ## Languages
 
-- **English** - Professional Working Proficiency
-- **Japanese** - Currently Learning (N4 Level)
-- **Indonesian** - Native
+- **Indonesian** — Native
+- **English** — C2 Proficient
+- **Japanese** — N4 Level
+
+---
+
+## Publications
+
+1. T. Z. Fatahillah, **B. Surya Nobelia**, A. Risnumawan, A. H. Alasiry, E. Y. Pradana and C. K. Wijaya, "Integrated Footstep Planning and CoM Control for Enhanced Stability and Maneuverability in EROS Humanoid Robot," *2024 International Electronics Symposium (IES)*, Denpasar, Indonesia, 2024, pp. 291–296. DOI: [10.1109/IES63037.2024.10665839](https://doi.org/10.1109/IES63037.2024.10665839)
+
+2. **Surya Nobelia B.**, Satria N., Henfri Binugroho E. and Fatahillah T. (2022). **Analysis of Stability on the ERISA Humanoid Dance Robot.** In *Proceedings of the 5th International Conference on Applied Science and Technology on Engineering Science — Volume 1: iCAST-ES*, SciTePress, pages 182–187. DOI: [10.5220/0011738400003575](https://doi.org/10.5220/0011738400003575)
+
+3. Satria N., Binugroho E., Chairussy R., Basuki D. and **Surya Nobelia B.** (2021). **The Development of Dance Movement in Humanoid Robot Dancing ERISA.** In *Proceedings of the 4th International Conference on Applied Science and Technology on Engineering Science — iCAST-ES*, SciTePress, pages 626–632. DOI: [10.5220/0010950100003260](https://doi.org/10.5220/0010950100003260)
 
 ---
 
@@ -222,7 +134,7 @@ Electronics Engineering
 
 <div class="cv-download">
     <p>Download my full CV in PDF format:</p>
-    <a href="#" class="btn btn-primary" onclick="alert('PDF will be available soon'); return false;">
+    <a href="https://drive.google.com/file/d/1ZjBAQGgC6JVhkOjw2xkc-l9BnaSSmutT/view?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
             <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
@@ -233,4 +145,4 @@ Electronics Engineering
 
 ---
 
-*Last Updated: February 2026*
+*Last Updated: April 2026*

@@ -76,55 +76,155 @@
         <div class="project-content">
             <h2 id="project-overview">Project Overview</h2>
 
-<p>This project is part of the development of an <strong>Electric Vehicle (EV) Charger</strong>. The focus was to build a <strong>monitoring and operation interface</strong> using a <strong>Human Machine Interface (HMI)</strong> to improve usability and make the EV charger easier to operate.</p>
+<p>This project was part of the development of an <strong>Electric Vehicle (EV) Charger</strong>. The focus was to build a <strong>monitoring and operation interface</strong> using a <strong>Human Machine Interface (HMI)</strong> to improve usability and make the EV charger easier to operate.</p>
 
-<p><img src="/pictures/charger.jpg" style="width:50%; max-width:520px; height:auto;" /></p>
+<hr />
 
 <h2 id="system-description">System Description</h2>
 
 <p>The HMI system supports:</p>
 
 <ul>
-  <li>Charging-process monitoring (status, progress, key parameters)</li>
-  <li>Payment method management</li>
-  <li>Fault detection and visualization</li>
-  <li>Improved user operation flow for the EV charger</li>
+  <li><strong>Charging process monitoring</strong> — real-time status, progress, and key parameters</li>
+  <li><strong>Payment method management</strong> — handling different payment flows</li>
+  <li><strong>Fault detection and visualization</strong> — displaying error states for operator response</li>
+  <li><strong>Streamlined operation flow</strong> — guiding users through the charging process</li>
 </ul>
+
+<hr />
 
 <h2 id="communication">Communication</h2>
 
-<p>A communication program was implemented between the <strong>EV charger controller</strong> and the <strong>HMI</strong> using <strong>RS485</strong>, enabling reliable send/receive of operational data and status information.</p>
+<p>RS485 communication was implemented between the <strong>EV charger controller</strong> and the <strong>HMI</strong>, enabling reliable bidirectional data transfer of operational status and control commands.</p>
+
+<hr />
 
 <h2 id="hmi-screen-design">HMI Screen Design</h2>
 
-<p>HMI screens were designed and implemented for:</p>
+<p>HMI screens were designed and implemented for two hardware platforms:</p>
+
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>Manufacturer</th>
+      <th>Programming Software</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HMIGXU5512</td>
+      <td>Schneider Electric</td>
+      <td>EcoStruxure Operator Terminal Expert</td>
+    </tr>
+    <tr>
+      <td>X2 Base 7</td>
+      <td>Beijer Electronics</td>
+      <td>IX Developer</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each screen was tailored to the hardware’s resolution and input method, covering all monitoring, payment, and fault-display pages.</p>
+
+<hr />
+
+<h2 id="key-responsibilities">Key Responsibilities</h2>
 
 <ul>
-  <li>HMIGXU5512 (Schneider Electric)
-<img src="/pictures/hmi2.jpg" style="width:50%; max-width:520px; height:auto;" /></li>
-  <li>X2 Base 7 (Beijer Electronics)
-<img src="/pictures/hmi.jpg" style="width:50%; max-width:520px; height:auto;" /></li>
+  <li>Designed and programmed HMI screens for <strong>HMIGXU5512</strong> (Schneider) and <strong>X2 Base 7</strong> (Beijer Electronics).</li>
+  <li>Implemented <strong>RS485 communication</strong> between the EV charger controller and the HMI.</li>
+  <li>Built display logic for charging monitoring, payment management, and fault detection.</li>
+  <li>Verified bidirectional data transmission between controller and HMI.</li>
 </ul>
 
-<h2 id="jobdesk--contributions">Jobdesk / Contributions</h2>
+<hr />
 
+<h2 id="technologies-used">Technologies Used</h2>
 <ul>
-  <li>Built a program to control the HMI display for EV charger operation, including payment management, charging monitoring, and fault detection.</li>
-  <li>Implemented RS485 communication between the EV charger controller and the HMI.</li>
-  <li>Designed and integrated HMI screens for <strong>HMIGXU5512</strong> and <strong>X2 Base 7</strong>.</li>
-  <li>Successfully verified data transmission (send/receive) between controller and HMI.</li>
+  <li><strong>HMI Platforms</strong>: Schneider HMIGXU5512, Beijer Electronics X2 Base 7</li>
+  <li><strong>Communication</strong>: RS485</li>
+  <li><strong>Software</strong>: EcoStruxure Operator Terminal Expert (Schneider), IX Developer (Beijer)</li>
 </ul>
 
-<h2 id="documentations">Documentations</h2>
-
-<p><img src="/pictures/ev_bus2.jpg" style="width:50%; max-width:520px; height:auto;" />
-<img src="/pictures/hmi.jpg" style="width:50%; max-width:520px; height:auto;" />
-<img src="/pictures/ev_bus3.jpg" style="width:50%; max-width:520px; height:auto;" /></p>
-
-<h2 id="video-demo">Video Demo</h2>
+<hr />
 
         </div>
         
+        
+        <div class="project-gallery">
+            <h2 class="gallery-title">Gallery</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/charger.jpg', 'EV Charger Unit')">
+                    <img src="/pictures/charger.jpg" alt="EV Charger Unit">
+                    
+                    <div class="gallery-caption">EV Charger Unit</div>
+                    
+                </div>
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/hmi2.png', 'HMI Screen — HMIGXU5512 (Schneider Electric)')">
+                    <img src="/pictures/hmi2.png" alt="HMI Screen — HMIGXU5512 (Schneider Electric)">
+                    
+                    <div class="gallery-caption">HMI Screen — HMIGXU5512 (Schneider Electric)</div>
+                    
+                </div>
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/hmi.png', 'HMI Screen — X2 Base 7 (Beijer Electronics)')">
+                    <img src="/pictures/hmi.png" alt="HMI Screen — X2 Base 7 (Beijer Electronics)">
+                    
+                    <div class="gallery-caption">HMI Screen — X2 Base 7 (Beijer Electronics)</div>
+                    
+                </div>
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/ev_bus2.jpg', 'Electric Vehichle Bus')">
+                    <img src="/pictures/ev_bus2.jpg" alt="Electric Vehichle Bus">
+                    
+                    <div class="gallery-caption">Electric Vehichle Bus</div>
+                    
+                </div>
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/ev_bus3.jpg', 'EV Charger Installation')">
+                    <img src="/pictures/ev_bus3.jpg" alt="EV Charger Installation">
+                    
+                    <div class="gallery-caption">EV Charger Installation</div>
+                    
+                </div>
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/hmi.jpg', 'Designing HMI')">
+                    <img src="/pictures/hmi.jpg" alt="Designing HMI">
+                    
+                    <div class="gallery-caption">Designing HMI</div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+            <div class="lightbox-content" onclick="event.stopPropagation()">
+                <img id="lightbox-img" src="" alt="">
+                <p id="lightbox-caption"></p>
+            </div>
+        </div>
+
+        <script>
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption || '';
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+        </script>
         
         
         <div class="project-links">
@@ -134,7 +234,7 @@
                     <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                     <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                 </svg>
-                Live Demo
+                Video Demo
             </a>
             
             

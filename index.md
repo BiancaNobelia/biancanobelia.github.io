@@ -7,9 +7,8 @@ title: Home
     <div class="container">
         <div class="hero-content">
             <h1 class="hero-title">Hello, I'm <span class="highlight">Bianca Surya Nobelia</span></h1>
-            <p class="hero-subtitle"></p>
             <p class="hero-description">
-                Welcome to my personal website. I specialize in robotics, embedded systems, and AI, creating innovative solutions for complex engineering challenges.
+                Building real-world automation and embedded systems — from industrial machines and AGVs to humanoid robots and IoT monitoring.
             </p>
             <div class="hero-actions">
                 <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View My Projects</a>
@@ -24,10 +23,10 @@ title: Home
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <p>
-                A highly motivated and enthusiastic engineer with expertise in various aspects of robotics, including Embedded Systems, Automation, Electronics Design, IoT, DSP, FPGA, Computer Vision, Robot Operating System (ROS/ROS2) and Robotics Simulation.
+                A highly motivated and enthusiastic engineer with expertise in various aspects of automation and embedded systems, including Industrial Automation, Mechanical Design, IoT, HMI Development, Servo & Pneumatic Systems, and Autonomous Robotics.
             </p>
             <p>
-                I hold a track record of winning several national competitions and possess experience in research and development across avionics, automotive, and marine technology sectors. Currently focusing on building my career in advanced robotics and embedded systems, while continuously deepening my knowledge in electronics, AI, and autonomous systems.
+                I hold a track record of winning national robotics competitions and possess experience. Currently focusing on building my career in advanced robotics and embedded systems, while deepening my knowledge in system integration and autonomous systems.
             </p>
         </div>
     </div>
@@ -43,11 +42,16 @@ title: Home
                 <div class="project-card">
                     {% if project.cover_image %}
                     <div class="project-card-image">
+                        {% if project.project_type %}
+                            <span class="type-badge type-{{ project.project_type }}">
+                            {% if project.project_type == "full-time" %}Full-time{% elsif project.project_type == "internship" %}Internship{% else %}Research{% endif %}
+                            </span>
+                        {% endif %}
                         <img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}">
                     </div>
                     {% endif %}
                     <div class="project-card-content">
-                        <h3>{{ project.title }}</h3>
+                        <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
                         <p>{{ project.description }}</p>
                         {% if project.tags %}
                         <div class="project-tags">
@@ -61,7 +65,7 @@ title: Home
                 </div>
                 {% endfor %}
             {% else %}
-                <p class="text-center">No featured projects yet. Add some projects to the <code>_projects/</code> folder!</p>
+                <p class="text-center">No featured projects yet.</p>
             {% endif %}
         </div>
         <div class="text-center" style="margin-top: 2rem;">

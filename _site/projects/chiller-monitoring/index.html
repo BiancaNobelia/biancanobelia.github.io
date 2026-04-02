@@ -46,8 +46,6 @@
                 
                 <span class="tag">ESP32</span>
                 
-                <span class="tag">Thermocouple</span>
-                
                 <span class="tag">Temperature Sensing</span>
                 
                 <span class="tag">Wi-Fi</span>
@@ -74,44 +72,119 @@
         <div class="project-content">
             <h2 id="project-overview">Project Overview</h2>
 
-<p>This project develops an <strong>IoT monitoring system</strong> for a <strong>chiller</strong>. The system measures the <strong>input and output temperatures</strong> and monitors the <strong>on/off status</strong> of key components. All data is sent over <strong>Wi-Fi</strong> and displayed on a <strong>website</strong> for easy monitoring.</p>
+<p>This project develops an <strong>IoT monitoring system</strong> for a <strong>chiller</strong>. The system measures the <strong>input and output temperatures</strong> and monitors the <strong>on/off status</strong> of key components. All data is transmitted over <strong>Wi-Fi</strong> and displayed on a <strong>web dashboard</strong> for remote monitoring.</p>
 
-<p><img src="/pictures/chiller.png" alt="chiller" style="width:60%; max-width:520px; height:auto;" /></p>
+<hr />
 
 <h2 id="system-description">System Description</h2>
 
-<p>The monitoring system covers:</p>
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Temperature</td>
+      <td>Chiller inlet &amp; outlet via thermocouple sensors</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>On/off state of chiller, compressor, and water pump</td>
+    </tr>
+    <tr>
+      <td>Connectivity</td>
+      <td>Wi-Fi data transmission to web dashboard</td>
+    </tr>
+  </tbody>
+</table>
 
-<ul>
-  <li><strong>Temperature Monitoring</strong>: Measures chiller inlet/outlet temperatures using <strong>thermocouple sensors</strong>.</li>
-  <li><strong>Status Monitoring</strong>: Observes the on/off state of the <strong>chiller</strong>, <strong>compressor</strong>, and <strong>water pump</strong>.</li>
-  <li><strong>Web Display</strong>: Sends data via <strong>Wi-Fi</strong> and visualizes it on a <strong>website/dashboard</strong> for remote viewing.</li>
-</ul>
+<hr />
 
 <h2 id="hardware--implementation">Hardware &amp; Implementation</h2>
 
 <ul>
-  <li><strong>Controller</strong>: ESP32 / ESP8266</li>
-  <li><strong>Sensors</strong>: Thermocouple sensors for temperature measurements</li>
-  <li><strong>SSR + relay</strong>: interface to safely switch/handle load-side signals</li>
-  <li><strong>Connectivity</strong>: Wi-Fi data transmission to a web-based display</li>
+  <li><strong>Microcontroller</strong>: ESP32 / ESP8266</li>
+  <li><strong>Sensors</strong>: Thermocouple sensors for inlet/outlet temperature measurement</li>
+  <li><strong>Switching</strong>: SSR + relay for safe load-side signal interfacing</li>
+  <li><strong>Connectivity</strong>: Wi-Fi data transmission to a web-based dashboard</li>
   <li><strong>Electrical Panel</strong>: Full wiring and component integration inside a control panel</li>
 </ul>
 
-<p><img src="/pictures/chiller_circuit.png" alt="chiller" style="width:60%; max-width:520px; height:auto;" /></p>
+<hr />
 
-<h2 id="jobdesk--contributions">Jobdesk / Contributions</h2>
+<h2 id="key-responsibilities">Key Responsibilities</h2>
 
 <ul>
-  <li>Designed and developed the Internet of Things (IoT) monitoring system.</li>
-  <li>Created the embedded program using ESP32/ESP8266.</li>
+  <li>Designed and developed the full IoT monitoring system.</li>
+  <li>Wrote the embedded firmware using ESP32/ESP8266.</li>
   <li>Performed soldering, component installation, and electrical panel wiring.</li>
-  <li>Conducted troubleshooting and maintenance of the system.</li>
-  <li>Implemented Wi-Fi data transmission to the website/dashboard.</li>
+  <li>Implemented Wi-Fi data transmission to the web dashboard.</li>
+  <li>Conducted troubleshooting and system maintenance.</li>
 </ul>
+
+<hr />
+
+<h2 id="technologies-used">Technologies Used</h2>
+<ul>
+  <li><strong>Microcontroller</strong>: ESP32 / ESP8266</li>
+  <li><strong>Sensors</strong>: Thermocouple (temperature), relay/SSR (status detection)</li>
+  <li><strong>Communication</strong>: Wi-Fi</li>
+  <li><strong>Interface</strong>: Web dashboard</li>
+</ul>
+
+<hr />
 
         </div>
         
+        
+        <div class="project-gallery">
+            <h2 class="gallery-title">Gallery</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/chiller.png', 'Chiller Unit')">
+                    <img src="/pictures/chiller.png" alt="Chiller Unit">
+                    
+                    <div class="gallery-caption">Chiller Unit</div>
+                    
+                </div>
+                
+                <div class="gallery-item" onclick="openLightbox('/pictures/chiller_circuit.png', 'Electrical Panel & Wiring')">
+                    <img src="/pictures/chiller_circuit.png" alt="Electrical Panel & Wiring">
+                    
+                    <div class="gallery-caption">Electrical Panel & Wiring</div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+            <div class="lightbox-content" onclick="event.stopPropagation()">
+                <img id="lightbox-img" src="" alt="">
+                <p id="lightbox-caption"></p>
+            </div>
+        </div>
+
+        <script>
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption || '';
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+        </script>
         
         
         <div class="project-links">

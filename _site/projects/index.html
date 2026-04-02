@@ -47,17 +47,17 @@
     <p class="filter-label">Filter by:</p>
     <div class="filter-tags">
         <button class="filter-tag active" data-filter="all">All</button>
-        <!-- Add more filter tags based on your project tags -->
-        <button class="filter-tag" data-filter="web">Web</button>
-        <button class="filter-tag" data-filter="mobile">Mobile</button>
-        <button class="filter-tag" data-filter="ai">AI/ML</button>
+        <button class="filter-tag" data-filter="full-time">Full-time</button>
+        <button class="filter-tag" data-filter="internship">Internship</button>
+        <button class="filter-tag" data-filter="research">Research</button>
     </div>
+    <p class="project-count"><span id="visible-count">6</span> project(s)</p>
 </div>
 
 <div class="projects-grid">
     
         
-        <div class="project-card" data-tags="humanoid robot,erisa,balance control,center of mass,five-link model,imu,pd control">
+        <div class="project-card" data-type="research">
             
             <div class="project-card-image">
                 
@@ -66,14 +66,14 @@
                     </span>
                 
                 <a href="/projects/humanoid-robot/">
-                    <img src="/pictures/erisa.png" alt="Balance Control System on ERISA Humanoid Dance Robot (GCoM-based Analysis)" />
+                    <img src="/pictures/erisa.png" alt="Balance Control System on Humanoid Dance Robot" />
                 </a>
             </div>
             
             
             <div class="project-card-content">
                 <h3>
-                    <a href="/projects/humanoid-robot/">Balance Control System on ERISA Humanoid Dance Robot (GCoM-based Analysis)</a>
+                    <a href="/projects/humanoid-robot/">Balance Control System on Humanoid Dance Robot</a>
                 </h3>
                 
                 
@@ -84,8 +84,6 @@
                 <div class="project-tags">
                     
                     <span class="tag">Humanoid Robot</span>
-                    
-                    <span class="tag">ERISA</span>
                     
                     <span class="tag">Balance Control</span>
                     
@@ -106,7 +104,7 @@
             </div>
         </div>
         
-        <div class="project-card" data-tags="hmi,ev charger,monitoring,industrial automation,schneider,beijer electronics,ui design">
+        <div class="project-card" data-type="internship">
             
             <div class="project-card-image">
                 
@@ -155,12 +153,12 @@
             </div>
         </div>
         
-        <div class="project-card" data-tags="iot,esp32,thermocouple,temperature sensing,wi-fi,web dashboard">
+        <div class="project-card" data-type="full-time">
             
             <div class="project-card-image">
                 
                     <span class="type-badge type-full-time">
-                    Full-time
+                    Full-time Work
                     </span>
                 
                 <a href="/projects/chiller-monitoring/">
@@ -185,8 +183,6 @@
                     
                     <span class="tag">ESP32</span>
                     
-                    <span class="tag">Thermocouple</span>
-                    
                     <span class="tag">Temperature Sensing</span>
                     
                     <span class="tag">Wi-Fi</span>
@@ -202,12 +198,12 @@
             </div>
         </div>
         
-        <div class="project-card" data-tags="pixy camera,nfc,proximity sensor,pid control,hoverboard motors,embedded system">
+        <div class="project-card" data-type="full-time">
             
             <div class="project-card-image">
                 
                     <span class="type-badge type-full-time">
-                    Full-time
+                    Full-time Work
                     </span>
                 
                 <a href="/projects/agv/">
@@ -249,12 +245,12 @@
             </div>
         </div>
         
-        <div class="project-card" data-tags="automation winding,insulation stripping,pneumatic,servo drive,double acting cylinder,hmi">
+        <div class="project-card" data-type="full-time">
             
             <div class="project-card-image">
                 
                     <span class="type-badge type-full-time">
-                    Full-time
+                    Full-time Work
                     </span>
                 
                 <a href="/projects/semi-automatic-winding/">
@@ -296,9 +292,13 @@
             </div>
         </div>
         
-        <div class="project-card" data-tags="3d modelling,creo,technical drawing,mass production,3d print,milling machine">
+        <div class="project-card" data-type="full-time">
             
             <div class="project-card-image">
+                
+                    <span class="type-badge type-full-time">
+                    Full-time Work
+                    </span>
                 
                 <a href="/projects/mechanical-design/">
                     <img src="/pictures/mcb.png" alt="Mechanical Design" />
@@ -322,7 +322,9 @@
                     
                     <span class="tag">Creo</span>
                     
-                    <span class="tag">Technical Drawing</span>
+                    <span class="tag">Autodesk Inventor</span>
+                    
+                    <span class="tag">Drawing</span>
                     
                     <span class="tag">Mass Production</span>
                     
@@ -343,28 +345,27 @@
 </div>
 
 <script>
-// Simple filter functionality
 document.addEventListener('DOMContentLoaded', function() {
     const filterTags = document.querySelectorAll('.filter-tag');
     const projectCards = document.querySelectorAll('.project-card');
-    
+    const countEl = document.getElementById('visible-count');
+
     filterTags.forEach(tag => {
         tag.addEventListener('click', function() {
             const filter = this.getAttribute('data-filter');
-            
-            // Update active state
+
             filterTags.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
-            
-            // Filter projects
+
+            let visible = 0;
             projectCards.forEach(card => {
-                const tags = card.getAttribute('data-tags');
-                if (filter === 'all' || tags.includes(filter)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+                const type = card.getAttribute('data-type');
+                const show = filter === 'all' || type === filter;
+                card.style.display = show ? 'block' : 'none';
+                if (show) visible++;
             });
+
+            if (countEl) countEl.textContent = visible;
         });
     });
 });

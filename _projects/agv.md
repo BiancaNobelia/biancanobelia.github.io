@@ -8,89 +8,149 @@ project_type: full-time
 demo_url: https://drive.google.com/file/d/1wfPRd6F6tgYcMVUB-KC_u0ycUEvOx157/view?usp=sharing
 repo_url: 
 date: 2023-05-01
+gallery:
+  - image: /pictures/agv.png
+    caption: AGV Unit
+  - image: /pictures/agv_circuit.jpg
+    caption: Electrical Panel & Wiring
 ---
 
 ## Project Overview
 
 This AGV autonomously transports materials from the warehouse to the production area. The system is designed for efficient operation and safety in an indoor logistics environment.
 
-<img src="/pictures/agv.png" alt="AGV" style="width:60%; max-width:520px; height:auto;">
+---
 
 ## System Description
 
-The AGV operation is built around three key sensing functions:
+The AGV is built around three core sensing functions:
 
-- **Line Navigation**: Uses a **Pixy Camera** to detect and follow floor guidance lines.
-- **Station/Destination Identification**: Uses an **NFC module** to identify stations and trigger stop/operation logic.
-- **Safety**: Uses a **proximity sensor** to detect obstacles and prevent collisions.
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Sensor</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Line Navigation</td>
+      <td>Pixy Camera</td>
+      <td>Detects and follows floor guidance lines</td>
+    </tr>
+    <tr>
+      <td>Station Identification</td>
+      <td>NFC Module</td>
+      <td>Identifies stations and triggers stop/operation logic</td>
+    </tr>
+    <tr>
+      <td>Obstacle Safety</td>
+      <td>Proximity Sensor</td>
+      <td>Detects obstacles and prevents collisions</td>
+    </tr>
+  </tbody>
+</table>
 
 The system is driven by **hoverboard motors**, providing strong traction and torque suitable for carrying materials.
 
+---
+
 ## Hardware Architecture
 
-- **Arduino Mega** as the main controller
-- **ESP32** for remote monitoring
-- **Pixy Camera**: line detection and tracking
-- **NFC module**: station/destination identification
-- **Proximity sensor**: obstacle detection for safety control
-- **LiPo battery** as a power system
+<table class="project-table">
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Arduino Mega</td>
+      <td>Main controller</td>
+    </tr>
+    <tr>
+      <td>ESP32</td>
+      <td>Remote monitoring</td>
+    </tr>
+    <tr>
+      <td>Pixy Camera</td>
+      <td>Line detection and tracking</td>
+    </tr>
+    <tr>
+      <td>NFC Module</td>
+      <td>Station/destination identification</td>
+    </tr>
+    <tr>
+      <td>Proximity Sensor</td>
+      <td>Obstacle detection</td>
+    </tr>
+    <tr>
+      <td>LiPo Battery</td>
+      <td>Power supply</td>
+    </tr>
+    <tr>
+      <td>Hoverboard Motors</td>
+      <td>Main drive actuators</td>
+    </tr>
+  </tbody>
+</table>
 
-### Actuation
-- **Hoverboard motors** as the main drive actuators
-- Motor control behavior optimized with **PID tuning** for smoother response and stability
+---
 
-## User Interface (HMI)
+## User Interface
 
 The AGV includes an on-device interface mounted on the panel:
-- **Multiple buttons** for user input (e.g., selection / confirmation / navigation)
-- A **small display** on the top area of the panel to **set the destination** before running
+- **Buttons** for user input (selection, confirmation, navigation)
+- **Small display** to set the destination before running
+
+---
 
 ## Mechanical Design
 
-- **Trolley** as a platform to carry the materials to be delivered.
-- **3D-printed mounting bracket for the NFC module**, ensuring stable alignment and reliable tag reading
-- **Panel design** to house the interface components and wiring organization
+- **Trolley** platform for carrying delivered materials
+- **3D-printed NFC mounting bracket** for stable alignment and reliable tag reading
+- **Panel design** to organize interface components and wiring
 
-<img src="/pictures/agv_circuit.jpg" alt="AGV" style="width:40%; max-width:520px; height:auto;">
+---
 
 ## Control & Tuning
 
-### PID Tuning
+PID parameters were iteratively tuned to achieve:
+- Stable line-following behavior
+- Smooth response to speed changes and load conditions
+- Consistent station start/stop behavior
 
-The AGV control performance was improved by iterative tuning of **PID parameters**, focusing on:
-
-- More stable line-following behavior
-- Better response to speed changes and load conditions
-- Smooth station starting & stopping behavior
+---
 
 ## Integration & Troubleshooting
 
-During integration and testing, several issues were addressed to ensure stable operation:
+During integration and testing, the following were addressed:
+- Sensor calibration for reliable navigation and detection
+- Wiring improvements to reduce noise and intermittent connections
+- Mechanical fixes for stable sensor alignment and mounting
+- Destination selection workflow verification via the on-device interface
 
-- Sensor calibration for reliable navigation and consistent detection
-- Wiring improvements to reduce noise and prevent intermittent connections
-- Mechanical fixes to ensure alignment and stable sensor mounting
-- Verification of destination selection workflow through the on-device interface
+---
+
+## Key Responsibilities
+
+- Analyzed and calibrated the system for proper AGV operation.
+- Enhanced AGV features for optimal performance.
+- Fine-tuned **PID parameters** to optimize control performance.
+- Implemented **ESP32-based remote monitoring** for operational visibility.
+- Addressed wiring and mechanical issues during integration.
+- Contributed to **mechanical design** (trolley, NFC mount, panel layout).
+
+---
 
 ## Technologies Used
+- **Controllers**: Arduino Mega (main), ESP32 (monitoring)
+- **Sensors**: Pixy Camera, NFC module, proximity sensor
+- **Actuation**: Hoverboard motors
+- **Control**: PID tuning
+- **Interface**: Push buttons, small display
+- **Mechanical**: 3D-printed parts, trolley, panel
 
-- **Arduino Mega** (main controller)
-- **ESP32** (remote monitoring / telemetry)
-- **Pixy Camera** (line navigation)
-- **NFC module** (station/destination identification)
-- **Proximity sensor** (safety)
-- **Buttons + small display** (destination selection interface)
-- **PID control** (motion/control tuning)
-- **Hoverboard motors** (actuation)
-- **Mechanical design** (trolley, NFC mount, panel)
-
-## Jobdesk / Contributions
-
-- Analyzed and calibrated the system to ensure proper AGV operation.
-- Enhanced AGV features for optimal performance.
-- Addressed wiring and mechanical issues during integration.
-- Fine-tuned **PID parameters** to optimize control performance.
-- Implemented/assisted **ESP32-based remote monitoring** for operational visibility.
-- Contributed to **mechanical design** (rack, NFC mounting, and panel/interface layout).
-
-## Video Demo
+---
