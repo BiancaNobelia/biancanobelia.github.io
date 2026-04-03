@@ -16,11 +16,12 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 **Tokyo Metropolitan University** <span class="resume-date">Oct 2024 – Sep 2026</span>
 
 *Master's degree — Mechanical Systems Engineering*  
+- Thesis: Development of Passive Type Force Display System with Redundant Brakes
 
 **Electronic Engineering Polytechnic Institute of Surabaya (EEPIS)** <span class="resume-date">Jul 2018 – Aug 2022</span>
 
 *Bachelor of Applied Engineering — Mechatronics Engineering | GPA 3.84/4*   
-- Final Project: Implementation of Balance Control System on the ERISA Humanoid Dance Robot
+- Thesis: Implementation of Balance Control System on the ERISA Humanoid Dance Robot
 
 ---
 
@@ -29,21 +30,21 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 ### PT. E-T-A Indonesia
 
 **Mechanical Engineer – Full-time** <span class="resume-date">Oct 2023 – Aug 2024</span>
-- Designed 3D CAD models and 2D technical drawings for new products using **Creo** and **Autodesk Inventor**.
+- Designed 3D CAD models and 2D technical drawings for new products using Creo and Autodesk Inventor.
 - Evaluated mold and die feasibility, assessing whether existing tooling met production requirements.
 - Estimated costs for new molds and dies required for the manufacturing process.
-- Created prototypes using resin 3D printing and milling machines.
+- Created prototypes using FDM/resin 3D printing and milling machines.
 - Coordinated with suppliers to source components and compare quotations.
 - Built and tested jigs and fixtures to validate assembly and manufacturing processes.
 - Supported manufacturability reviews and design improvements for mass production.
 
-> **Key Achievement:** Successfully developed new product designs — including electrical connectors, sockets, and protection devices — ready for mass production in collaboration with E-T-A Germany.
+> **Key Achievement:** Successfully developed new product designs (including electrical connectors, sockets, and protection devices) ready for mass production in collaboration with E-T-A Germany.
 
 **Robotic Engineer – Full-time** <span class="resume-date">Feb 2023 – Sep 2023</span>
-- Optimized and maintained the **Automatic Guided Vehicle (AGV)** for warehouse-to-production logistics, using a Pixy Camera for line navigation, NFC for station identification, and proximity sensors for obstacle safety.
-- Fine-tuned **PID parameters** to achieve stable line-following and smooth station start/stop behavior.
-- Implemented **ESP32-based remote monitoring** for operational visibility.
-- Configured and programmed **Panasonic and Festo servo drives** via RS232/RS485 communication with Weintek HMI for the semi-automatic winding machine.
+- Optimized and maintained the Automatic Guided Vehicle (AGV) for warehouse-to-production logistics.
+- Fine-tuned PID parameters to achieve stable line-following and smooth station start/stop behavior.
+- Implemented ESP32-based remote monitoring for operational visibility.
+- Configured and programmed Panasonic and Festo servo drives via RS232/RS485 communication with Weintek HMI for the semi-automatic winding machine.
 - Resolved mechanical and electrical faults in pneumatic and servo systems during commissioning.
 - Developed procedural documents and established protocols to ensure adherence to contractual and regulatory requirements.
 
@@ -53,11 +54,9 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 
 ### PT. Yanasurya Bhaktipersada
 
-**Mechatronics Specialist – Full-time** <span class="resume-date">Nov 2022 – Feb 2023</span>
-- Designed and developed an **IoT monitoring system** for chiller and molding machines using ESP32/ESP8266.
-- Monitored inlet/outlet temperatures via thermocouple sensors and on/off status of key components (compressor, water pump).
-- Implemented Wi-Fi data transmission to a web dashboard for real-time remote monitoring.
-- Performed soldering, component installation, and electrical panel wiring.
+**Mechatronics Specialist – Contract** <span class="resume-date">Nov 2022 – Feb 2023</span>
+- Designed and developed an IoT monitoring system for chiller and molding machines using ESP32/ESP8266.
+- Monitored inlet/outlet temperatures via thermocouple sensors and component status (compressor, water pump), transmitted over Wi-Fi to a web dashboard.
 - Conducted troubleshooting and system maintenance.
 
 > **Key Achievement:** Delivered a fully operational IIoT monitoring system for factory machines, enabling real-time remote monitoring via the company's website.
@@ -66,12 +65,11 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 
 ### PT. Industri Kereta Api (Persero)
 
-**Research and Development – Intern** <span class="resume-date">Feb 2022 – Jul 2022</span>
-- Designed and programmed **HMI screens** for an EV charger on two platforms: **HMIGXU5512** (Schneider, EcoStruxure) and **X2 Base 7** (Beijer Electronics, IX Developer).
-- Implemented **RS485 communication** between the EV charger controller and HMI for bidirectional data transfer.
+**Research and Development – Internship** <span class="resume-date">Feb 2022 – Jul 2022</span>
+- Designed and programmed HMI screens for an EV charger on two platforms: HMIGXU5512 (Schneider, EcoStruxure) and X2 Base 7 (Beijer Electronics, IX Developer).
+- Implemented and verified RS485 communication between the EV charger controller and HMI for bidirectional data transfer.
 - Built display logic for charging process monitoring, payment method management, and fault detection.
-- Developed a **GUI using .NET Framework C#** to display UART communication data from two STM32 Discovery boards.
-- Verified bidirectional data transmission between controller and HMI.
+- Developed a GUI using .NET Framework C# to display UART communication data from two STM32 Discovery boards.
 
 > **Key Achievement:** Successfully delivered dual-platform HMI interfaces with RS485 communication for an EV charger, covering charging monitoring, payment flow, and fault visualization.
 
@@ -79,11 +77,11 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 
 ### PT. Karunia Prima Engineering
 
-**Technician and Engineer – Intern** <span class="resume-date">Jan 2021 – Apr 2021</span>
+**Technician and Engineer – Internship** <span class="resume-date">Jan 2021 – Apr 2021</span>
 - Assembled an electrical control panel, including wiring schematics, and conducted integrated testing with factory equipment such as actuators, sensors, and motors.
 - Designed an HMI display to provide control and monitoring capabilities for the factory equipment.
 
-> **Key Achievement:** Independently assembled and tested a complete electrical control panel integrated with factory automation equipment.
+> **Key Achievement:** Collaboratively assembled and tested a complete electrical control panel integrated with factory automation equipment.
 
 ---
 
@@ -102,7 +100,7 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 - Developed a balance control system, designed dance motions and walking paths using forward and inverse kinematics, and enhanced the robot's communication system with Bluetooth technology.
 - Produced a comprehensive research report published at an international conference.
 
-> **Key Achievement:** Won 1st Place at the National Dance Robot Contest two years in a row.
+> **Key Achievement:** Won 1st Place at the National Dance Robot Contest two years in a row and published several papers.
 
 ---
 
@@ -125,15 +123,15 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 
 ## Languages
 
-- **Indonesian** — Native
 - **English** — C2 Proficient
 - **Japanese** — N4 Level
+- **Indonesian** — Native
 
 ---
 
 ## Publications
 
-1. T. Z. Fatahillah, **B. Surya Nobelia**, A. Risnumawan, A. H. Alasiry, E. Y. Pradana and C. K. Wijaya, "Integrated Footstep Planning and CoM Control for Enhanced Stability and Maneuverability in EROS Humanoid Robot," *2024 International Electronics Symposium (IES)*, Denpasar, Indonesia, 2024, pp. 291–296. DOI: [10.1109/IES63037.2024.10665839](https://doi.org/10.1109/IES63037.2024.10665839)
+1. T. Z. Fatahillah, **B. Surya Nobelia**, A. Risnumawan, A. H. Alasiry, E. Y. Pradana and C. K. Wijaya, **Integrated Footstep Planning and CoM Control for Enhanced Stability and Maneuverability in EROS Humanoid Robot**, *2024 International Electronics Symposium (IES)*, Denpasar, Indonesia, 2024, pp. 291–296. DOI: [10.1109/IES63037.2024.10665839](https://doi.org/10.1109/IES63037.2024.10665839)
 
 2. **Surya Nobelia B.**, Satria N., Henfri Binugroho E. and Fatahillah T. (2022). **Analysis of Stability on the ERISA Humanoid Dance Robot.** In *Proceedings of the 5th International Conference on Applied Science and Technology on Engineering Science — Volume 1: iCAST-ES*, SciTePress, pages 182–187. DOI: [10.5220/0011738400003575](https://doi.org/10.5220/0011738400003575)
 

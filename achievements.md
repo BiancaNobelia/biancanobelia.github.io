@@ -7,7 +7,7 @@ permalink: /achievements/
 
 <div class="achievements">
 
-  <p class="ach-note">📄 Items with an underline are clickable — click to view the certificate.</p>
+  <p class="ach-note">📄 Items marked with ↗ are clickable — click to view the certificate.</p>
 
   <!-- ===================== -->
   <!-- SCHOLARSHIPS SECTION  -->
@@ -92,8 +92,20 @@ permalink: /achievements/
   <div class="ach-item ach-achievement">
     <div class="ach-head">
       <div class="ach-title">
+        <a class="ach-link-title" href="https://drive.google.com/file/d/1xNM8dSif6OGG4T1Qi6UEAT_gV4-D9_20/view?usp=sharing" target="_blank" rel="noopener">
+          <b>Basic Mechanical Design Training</b>
+        </a>
+        <div class="ach-org">ATMI Polytechnic Surakarta BizDec</div>
+      </div>
+      <div class="ach-date">May 2024</div>
+    </div>
+  </div>
+
+  <div class="ach-item ach-achievement">
+    <div class="ach-head">
+      <div class="ach-title">
         <a class="ach-link-title" href="https://drive.google.com/file/d/1eOLVvta4I-ZEHwXhNI67SAmTudaXsAVG/view?usp=sharing" target="_blank" rel="noopener">
-          <b>PLC-Based Electronic Equipment Operation Training</b>
+          <b>PLC-Based Electronic Equipment Operation Training & Certification</b>
         </a>
         <div class="ach-org">Industry 4.0 Digital Center (PIDI 4.0)</div>
       </div>
