@@ -7,7 +7,7 @@ permalink: /resume/
 
 ## Professional Summary
 
-Demonstrates a strong self-motivation and diligent work ethic, adept at performing under pressure within strict timelines, proficient in working collaboratively as a team, possesses a strong drive and enthusiasm for learning, exhibits excellent communication skills, and holds prior experience in the field of research and development. Fluent in both Bahasa and English languages.
+Demonstrates a strong self-motivation and diligent work ethic, adept at performing under pressure within strict timelines, proficient in working collaboratively as a team, possesses a strong drive and enthusiasm for learning, exhibits excellent communication skills, and holds prior experience in the field of research and development.
 
 ---
 
@@ -29,27 +29,36 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 ### PT. E-T-A Indonesia
 
 **Mechanical Engineer – Full-time** <span class="resume-date">Oct 2023 – Aug 2024</span>
-- Demonstrated proficiency in operating filament and resin-based 3D printing systems, milling machines, and other mechanical tools.
-- Designed and analyzed the mechanical design for a new product in collaboration with E-T-A Germany using Creo and Autodesk Inventor.
-- Calculated the estimated cost for new molds and dies for the manufacturing process.
+- Designed 3D CAD models and 2D technical drawings for new products using **Creo** and **Autodesk Inventor**.
+- Evaluated mold and die feasibility, assessing whether existing tooling met production requirements.
+- Estimated costs for new molds and dies required for the manufacturing process.
+- Created prototypes using resin 3D printing and milling machines.
+- Coordinated with suppliers to source components and compare quotations.
+- Built and tested jigs and fixtures to validate assembly and manufacturing processes.
+- Supported manufacturability reviews and design improvements for mass production.
 
-> **Key Achievement:** Successfully collaborated with E-T-A Germany to deliver new product designs ready for mass production.
+> **Key Achievement:** Successfully developed new product designs — including electrical connectors, sockets, and protection devices — ready for mass production in collaboration with E-T-A Germany.
 
 **Robotic Engineer – Full-time** <span class="resume-date">Feb 2023 – Sep 2023</span>
-- Optimized and maintained the Automatic Guided Vehicle (AGV) system while fine-tuning the PID parameters for peak performance.
-- Programmed and controlled Panasonic and Festo servo drives via RS232/RS485 communication using HMI.
-- Resolved intricate issues in pneumatic and electrical systems to diagnose and repair mechanical and electrical faults.
+- Optimized and maintained the **Automatic Guided Vehicle (AGV)** for warehouse-to-production logistics, using a Pixy Camera for line navigation, NFC for station identification, and proximity sensors for obstacle safety.
+- Fine-tuned **PID parameters** to achieve stable line-following and smooth station start/stop behavior.
+- Implemented **ESP32-based remote monitoring** for operational visibility.
+- Configured and programmed **Panasonic and Festo servo drives** via RS232/RS485 communication with Weintek HMI for the semi-automatic winding machine.
+- Resolved mechanical and electrical faults in pneumatic and servo systems during commissioning.
 - Developed procedural documents and established protocols to ensure adherence to contractual and regulatory requirements.
 
-> **Key Achievement:** Successfully optimized AGV performance, improving autonomous transport reliability & safety in the production line.
+> **Key Achievement:** Successfully deployed AGV for autonomous material transport and commissioned a semi-automatic winding machine combining winding and insulation stripping to improve production output.
 
 ---
 
 ### PT. Yanasurya Bhaktipersada
 
 **Mechatronics Specialist – Full-time** <span class="resume-date">Nov 2022 – Feb 2023</span>
-- Designed and adapted factory machines to facilitate the deployment of Industrial Internet of Things (IIoT).
-- Developed and implemented a monitoring system for chiller and molding machines to monitor vital machine parameters, including tank volume, temperature, and pressure, and displayed the data on the company's website.
+- Designed and developed an **IoT monitoring system** for chiller and molding machines using ESP32/ESP8266.
+- Monitored inlet/outlet temperatures via thermocouple sensors and on/off status of key components (compressor, water pump).
+- Implemented Wi-Fi data transmission to a web dashboard for real-time remote monitoring.
+- Performed soldering, component installation, and electrical panel wiring.
+- Conducted troubleshooting and system maintenance.
 
 > **Key Achievement:** Delivered a fully operational IIoT monitoring system for factory machines, enabling real-time remote monitoring via the company's website.
 
@@ -58,11 +67,13 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 ### PT. Industri Kereta Api (Persero)
 
 **Research and Development – Intern** <span class="resume-date">Feb 2022 – Jul 2022</span>
-- Built a program to control the communication between the Electric Vehicle Charger and DC Power Module using an STM32 microcontroller via the CAN-bus protocol.
-- Designed and programmed an HMI display to control the Electric Vehicle Charger using HMIGXU5512 (Schneider) and X2 Base 7 (Beijer Electronics).
-- Designed and developed a GUI to display data transmitted over UART communication from two STM32 Discovery boards using .NET Framework C#.
+- Designed and programmed **HMI screens** for an EV charger on two platforms: **HMIGXU5512** (Schneider, EcoStruxure) and **X2 Base 7** (Beijer Electronics, IX Developer).
+- Implemented **RS485 communication** between the EV charger controller and HMI for bidirectional data transfer.
+- Built display logic for charging process monitoring, payment method management, and fault detection.
+- Developed a **GUI using .NET Framework C#** to display UART communication data from two STM32 Discovery boards.
+- Verified bidirectional data transmission between controller and HMI.
 
-> **Key Achievement:** Successfully implemented CAN-bus communication and dual-platform HMI for an EV charger system.
+> **Key Achievement:** Successfully delivered dual-platform HMI interfaces with RS485 communication for an EV charger, covering charging monitoring, payment flow, and fault visualization.
 
 ---
 
