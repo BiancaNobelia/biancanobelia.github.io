@@ -108,6 +108,7 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 
 **Programming:** C/C++, Python, C#  
 **Embedded Systems:** ST Microcontroller, ESP Microcontroller, Arduino  
+**Operating Systems:** Linux, Windows  
 **Web Programming:** HTML, PHP, JavaScript  
 **Desktop Programming:** .NET  
 **HMI Programming:** Weintek, Omron, Schneider, Beijer Electronics  
@@ -116,8 +117,7 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 **3D Design:** Autodesk Inventor, Creo  
 **Machining:** Milling, FDM and Resin-based 3D Print  
 **Electrical Design:** Autodesk Eagle, KiCad, AutoCAD  
-**Version Control:** GitHub  
-**Non-technical:** Public speaking, Problem-solving, Organizational, Collaborating, Writing
+**Version Control:** Git, GitHub  
 
 ---
 
