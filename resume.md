@@ -31,7 +31,8 @@ Demonstrates a strong self-motivation and diligent work ethic, adept at performi
 
 **Mechanical Engineer – Full-time** <span class="resume-date">Oct 2023 – Aug 2024</span>
 - Designed 3D CAD models and 2D technical drawings for new products using Creo and Autodesk Inventor.
-- Evaluated mold and die feasibility, assessing whether existing tooling met production requirements.
+- Evaluated the feasibility of molds and dies for new product designs.
+- Collaborated with E-T-A Germany on new product development projects
 - Estimated costs for new molds and dies required for the manufacturing process.
 - Created prototypes using FDM/resin 3D printing and milling machines.
 - Coordinated with suppliers to source components and compare quotations.

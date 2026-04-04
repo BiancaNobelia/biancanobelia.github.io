@@ -47,7 +47,7 @@ This project focused on developing new products and preparing them for mass prod
     </tr>
     <tr>
       <td>Tooling Feasibility</td>
-      <td>Evaluated mold and die feasibility, assessing whether existing tooling met production requirements</td>
+      <td>Evaluated the feasibility of molds and dies for new product designs.</td>
     </tr>
     <tr>
       <td>Cost Estimation</td>
@@ -68,6 +68,10 @@ This project focused on developing new products and preparing them for mass prod
     <tr>
       <td>Production Readiness</td>
       <td>Supported manufacturability reviews and design improvements for mass production</td>
+    </tr>
+    <tr>
+      <td>International Collaboration</td>
+      <td>Collaborated with E-T-A Germany on new product development projects</td>
     </tr>
   </tbody>
 </table>
