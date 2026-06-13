@@ -43,7 +43,7 @@ permalink: /achievements/
   <div class="ach-item ach-award">
     <div class="ach-head">
       <div class="ach-title">
-        <b>Indonesia Dance Robot Contest 2021</b>
+        <b>Indonesian Humanoid Robot Dance Contest 2021</b>
         <div class="ach-org">Ministry of Education, Culture, Research, and Technology</div>
       </div>
       <div class="ach-date">Sept–Oct 2021</div>
@@ -57,7 +57,7 @@ permalink: /achievements/
   <div class="ach-item ach-award">
     <div class="ach-head">
       <div class="ach-title">
-        <b>Indonesia Dance Robot Contest 2020</b>
+        <b>Indonesian Humanoid Robot Dance Contest 2020</b>
         <div class="ach-org">Ministry of Education, Culture, Research, and Technology</div>
       </div>
       <div class="ach-date">Oct–Nov 2020</div>
