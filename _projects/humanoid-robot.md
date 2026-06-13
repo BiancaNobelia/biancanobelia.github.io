@@ -10,9 +10,9 @@ repo_url:
 date: 2022-01-13
 ---
 
-## Project Overview
+## Research Overview
 
-This project focused on implementing a **balance control system** for the **ERISA humanoid dance robot**, used in the **Indonesian Dance Robot Contest (KRSTI)**. In KRSTI, robot stability is a key scoring factor — each zone involves different dance motions and transitions that can easily cause a robot to fall.
+This research focused on implementing a **balance control system** for the **ERISA humanoid dance robot**, used in the **Indonesian Dance Robot Contest (KRSTI)**. In KRSTI, robot stability is a key scoring factor — each zone involves different dance motions and transitions that can easily cause a robot to fall.
 
 To stabilize ERISA under dynamic conditions, I implemented a **closed-loop PD controller** using **pitch feedback** from an IMU sensor, supported by a **Ground Projection of Center of Mass (GCoM)** analysis based on a simplified **Five-Link model**.
 
