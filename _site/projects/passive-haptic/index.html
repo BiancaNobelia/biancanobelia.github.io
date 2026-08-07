@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passive Haptic Force Display Using Redundant Brake System - Bianca Surya Nobelia</title>
+    <meta name="description" content="A highly motivated robotics engineer with expertise in Embedded Systems,  Computer Vision, Electronics Design, ROS/ROS2, and FPGA development.">
+    <script>
+        (function() {
+            try {
+                var t = localStorage.getItem('theme');
+                if (t) document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/">Bianca Surya Nobelia</a>
+        </div>
+        
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <ul class="navbar-menu">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/projects/" class="active">Projects</a></li>
+            <li><a href="/achievements/" >Achievements</a></li>
+            <li><a href="/resume/" >Resume</a></li>
+            <li><a href="/contact/" >Contact</a></li>
+            <li>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+(function() {
+    var toggle = document.getElementById('theme-toggle');
+    var root = document.documentElement;
+
+    function currentTheme() {
+        var stored = localStorage.getItem('theme');
+        if (stored) return stored;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    toggle.addEventListener('click', function() {
+        var next = currentTheme() === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', next);
+        root.setAttribute('data-theme', next);
+    });
+})();
+</script>
+
+    
+    <main class="main-content">
+        <div class="project-detail">
+    <div class="container">
+        <header class="project-header">
+            <h1>Passive Haptic Force Display Using Redundant Brake System</h1>
+            
+            
+            
+            <div class="project-tags">
+                
+                <span class="tag">Haptics</span>
+                
+                <span class="tag">Virtual Reality</span>
+                
+                <span class="tag">Force Control</span>
+                
+                <span class="tag">Kinematics</span>
+                
+                <span class="tag">Brake System</span>
+                
+                <span class="tag">Embedded System</span>
+                
+            </div>
+            
+        </header>
+        
+        
+        <div class="project-cover">
+        
+            <span class="type-badge type-research">
+            Research
+            </span>
+        
+
+        <img src="/pictures/plemo_photo_r.jpg" alt="Passive Haptic Force Display Using Redundant Brake System"
+            style="width:100%; max-height:320px; object-fit:cover; border-radius:12px;">
+        </div>
+        
+        
+        <div class="project-content">
+            <h2 id="research-overview">Research Overview</h2>
+
+<p>This research focuses on the development and control of a passive-type planar haptic device using redundant brakes. Unlike motor-driven haptic systems, this device does not actively move the user’s hand. Instead, the user voluntarily moves the handle, while the brakes generate resistive forces to guide the motion.</p>
+
+<p>The main objective of this research is to improve the force-display performance of a passive haptic system, especially in terms of tracking accuracy, force direction accuracy, reaction-force capability, and interaction smoothness.</p>
+
+<p>Because passive systems only dissipate energy, they are generally safer for physical human–robot interaction. This makes the system suitable for applications such as upper-limb rehabilitation, surgical simulation training, and teleoperation.</p>
+
+<hr />
+
+<h2 id="system-specifications">System Specifications</h2>
+
+<p>The system is a 2-DOF planar parallel-link haptic device operated on a tabletop. The handle moves in the X–Y plane, and the user receives force feedback through passive braking resistance.</p>
+
+<p>Key specifications:</p>
+<ul>
+  <li>2-DOF planar parallel-link mechanism</li>
+  <li>Passive actuation using 2 powder brakes and 2 powder clutches</li>
+  <li>Actuators mounted under the table</li>
+  <li>Force sensor mounted at the handle</li>
+  <li>2 encoders used for joint angle measurement</li>
+  <li>Real-time control loop at 500 Hz</li>
+  <li>Integrated with Unity for virtual environment interaction</li>
+</ul>
+
+<p>The parallel-link mechanism allows the actuators to be mounted under the table while keeping the handle workspace unobstructed and reduce moving inertia</p>
+
+<hr />
+
+<h2 id="system-architecture">System Architecture</h2>
+
+<p>The system consists of three main parts: the mechanical system, the measurement and control system, and the virtual environment.</p>
+
+<p>The mechanical system includes the planar parallel-link mechanism, handle, brakes, clutches, and transmission mechanism. The measurement system uses encoders to calculate the handle position and a force sensor to measure the interaction force. The control system selects the appropriate brake direction and calculates the torque command based on the target trajectory.</p>
+
+<p>The system can also exchange data with Unity in real time, allowing the haptic device to interact with a virtual environment displayed on a monitor or VR headset.</p>
+
+<hr />
+
+<h2 id="control-strategies">Control Strategies</h2>
+
+<p>The main challenge of a passive haptic system is that brakes can only resist motion. Therefore, the displayable force direction is limited compared with motor-driven systems.</p>
+
+<p>To address this issue, this research evaluates several brake activation strategies.</p>
+
+<p>First, a single-brake activation method is used as the baseline. In this method, only one brake direction is selected based on the target motion direction.</p>
+
+<p>Then, dual-brake activation strategies are introduced. Instead of activating only one brake, two brake directions are selected simultaneously. This allows the system to generate a resultant force direction closer to the desired direction.</p>
+
+<hr />
+
+<h2 id="unity-based-vr-integration">Unity-Based VR Integration</h2>
+
+<p>A Unity-based virtual environment was developed as a proof-of-concept implementation. The haptic device exchanges data with Unity in real time, allowing the virtual object or game environment to respond to the user’s handle motion.</p>
+
+<p>The virtual environment can be displayed on either a monitor or a VR headset. This integration demonstrates the potential of the system for more immersive haptic applications, such as rehabilitation training, simulation, and interactive virtual tasks.</p>
+
+<hr />
+
+<h2 id="publication">Publication</h2>
+
+<p>This work was presented at the <strong>26th Society of Instrument and Control Engineers (SICE) System Integration Division Conference (SI2025)</strong>:</p>
+
+<div class="publication-card">
+  <p class="pub-citation"><strong>Surya Nobelia B.</strong>, N. Takesue, and J. Furusho. <strong>Path Following with Passive Haptic Force Display Using Redundant Brake System</strong> Presented at the 26th SICE System Integration Division Conference (SI2025).</p>
+</div>
+<div class="publication-card">
+  <p class="pub-citation"><strong>Surya Nobelia B.</strong>, N. Takesue, and J. Furusho. <strong>Comparative Evaluation of Single- and Dual-Brake Activation in a Redundant Passive-Type Force Display System</strong> 2026 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM 2026), Genova, Italy.</p>
+</div>
+
+        </div>
+        
+        
+        
+        <div class="project-links">
+            
+            
+            
+        </div>
+        
+        <div class="project-navigation">
+            <a href="/projects/" class="back-link">← Back to Projects</a>
+        </div>
+    </div>
+</div>
+
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bianca Surya Nobelia. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

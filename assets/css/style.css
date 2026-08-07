@@ -14,6 +14,49 @@
     --shadow-lg: 0 10px 30px rgba(124, 106, 240, 0.12);
     --radius: 8px;
     --transition: all 0.3s ease;
+
+    /* Achievements page aliases */
+    --text: var(--text-color);
+    --muted: var(--text-light);
+    --line: var(--border-color);
+    --card-bg: #ffffff;
+
+    /* Fixed-dark accent bar (footer, skills strip) */
+    --inverse-bg: #2d2d3f;
+    --inverse-text: #ffffff;
+}
+
+/* ===========================
+   Dark mode
+   =========================== */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #9d8cf5;
+        --primary-dark: #b3a6f8;
+        --secondary-color: #94a3b8;
+        --text-color: #e8e6f5;
+        --text-light: #a8a4c0;
+        --bg-color: #14121f;
+        --bg-alt: #1e1b2e;
+        --border-color: #332f4a;
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+        --card-bg: #1e1b2e;
+    }
+}
+
+:root[data-theme="dark"] {
+    --primary-color: #9d8cf5;
+    --primary-dark: #b3a6f8;
+    --secondary-color: #94a3b8;
+    --text-color: #e8e6f5;
+    --text-light: #a8a4c0;
+    --bg-color: #14121f;
+    --bg-alt: #1e1b2e;
+    --border-color: #332f4a;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --card-bg: #1e1b2e;
 }
 
 * {
@@ -100,6 +143,54 @@ a:hover {
     color: var(--primary-color);
 }
 
+/* Theme toggle */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--bg-alt);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.theme-toggle svg {
+    width: 18px;
+    height: 18px;
+}
+
+.theme-toggle .icon-moon {
+    display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+    display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+    display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .icon-sun {
+        display: none;
+    }
+
+    :root:not([data-theme="light"]) .theme-toggle .icon-moon {
+        display: block;
+    }
+}
+
 /* Mobile menu toggle */
 .nav-toggle {
     display: none;
@@ -170,6 +261,26 @@ a:hover {
     color: var(--text-color);
     padding: 6rem 0;
     text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .hero {
+        background:
+            radial-gradient(ellipse at 20% 50%, rgba(124, 106, 240, 0.25) 0%, transparent 60%),
+            radial-gradient(ellipse at 80% 20%, rgba(45, 212, 191, 0.18) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 80%, rgba(244, 114, 182, 0.18) 0%, transparent 55%),
+            radial-gradient(ellipse at 70% 60%, rgba(157, 140, 245, 0.2) 0%, transparent 50%),
+            var(--bg-color);
+    }
+}
+
+:root[data-theme="dark"] .hero {
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(124, 106, 240, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(45, 212, 191, 0.18) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(244, 114, 182, 0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 70% 60%, rgba(157, 140, 245, 0.2) 0%, transparent 50%),
+        var(--bg-color);
 }
 
 .hero .hero-description {
@@ -366,7 +477,7 @@ a:hover {
    Skills Strip
    =========================== */
 .skills-strip {
-    background: var(--text-color);
+    background: var(--inverse-bg);
     padding: 1rem 0;
     overflow: hidden;
 }
@@ -492,6 +603,7 @@ a:hover {
 
 .project-card {
     background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -500,6 +612,7 @@ a:hover {
 
 .project-card:hover {
     transform: translateY(-5px);
+    border-color: var(--primary-color);
     box-shadow: var(--shadow-lg);
 }
 
@@ -803,14 +916,15 @@ a:hover {
     border-left: 4px solid #f59e0b;
     padding: 1rem 1.5rem;
     border-radius: var(--radius);
+    color: #78350f;
 }
 
 /* ===========================
    Footer
    =========================== */
 .footer {
-    background-color: var(--text-color);
-    color: white;
+    background-color: var(--inverse-bg);
+    color: var(--inverse-text);
     padding: 2rem 0;
     text-align: center;
     margin-top: 4rem;
@@ -1041,6 +1155,7 @@ a:hover {
 .ach-scholarship { border-left-color: #a78bfa; }
 .ach-award       { border-left-color: #f472b6; }
 .ach-achievement { border-left-color: #2dd4bf; }
+.ach-publication { border-left-color: #60a5fa; }
 
 .ach-head {
   display: flex;

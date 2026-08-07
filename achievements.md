@@ -10,30 +10,65 @@ permalink: /achievements/
   <p class="ach-note">📄 Items marked with ↗ are clickable — click to view the certificate.</p>
 
   <!-- ===================== -->
-  <!-- SCHOLARSHIPS SECTION  -->
+  <!-- PUBLICATIONS SECTION  -->
   <!-- ===================== -->
-  <h2 class="ach-section">🎓 Scholarships</h2>
+  <h2 class="ach-section">📚 Publications</h2>
 
-  <div class="ach-item ach-scholarship">
+  <div class="ach-item ach-publication">
     <div class="ach-head">
       <div class="ach-title">
-        <b>MEXT Scholarship</b>
-        <div class="ach-org">Japanese Government</div>
+        <b>Comparative Evaluation of Single- and Dual-Brake Activation in a Redundant Passive-Type Force Display System</b>
+        <div class="ach-org"><b>B. S. Nobelia</b>, N. Takesue, and J. Furusho — 2026 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM 2026), Genova, Italy</div>
       </div>
-      <div class="ach-date">2024–2026</div>
+      <div class="ach-date">2026</div>
     </div>
   </div>
 
-  <div class="ach-item ach-scholarship">
+  <div class="ach-item ach-publication">
     <div class="ach-head">
       <div class="ach-title">
-        <b>Adaro Scholarship</b>
-        <div class="ach-org">PT. Adaro Energy, Tbk</div>
+        <b>Path Following with Passive Haptic Force Display Using Redundant Brake System</b>
+        <div class="ach-org"><b>Surya Nobelia B.</b>, N. Takesue, and J. Furusho — Presented at the 26th SICE System Integration Division Conference (SI2025)</div>
       </div>
-      <div class="ach-date">2021–2022</div>
+      <div class="ach-date">2025</div>
     </div>
   </div>
 
+  <div class="ach-item ach-publication">
+    <div class="ach-head">
+      <div class="ach-title">
+        <a class="ach-link-title" href="https://doi.org/10.1109/IES63037.2024.10665839" target="_blank" rel="noopener">
+          <b>Integrated Footstep Planning and CoM Control for Enhanced Stability and Maneuverability in EROS Humanoid Robot</b>
+        </a>
+        <div class="ach-org">T. Z. Fatahillah, <b>B. Surya Nobelia</b>, A. Risnumawan, A. H. Alasiry, E. Y. Pradana and C. K. Wijaya — 2024 International Electronics Symposium (IES), Denpasar, Indonesia, pp. 291–296</div>
+      </div>
+      <div class="ach-date">2024</div>
+    </div>
+  </div>
+
+  <div class="ach-item ach-publication">
+    <div class="ach-head">
+      <div class="ach-title">
+        <a class="ach-link-title" href="https://doi.org/10.5220/0011738400003575" target="_blank" rel="noopener">
+          <b>Analysis of Stability on the ERISA Humanoid Dance Robot</b>
+        </a>
+        <div class="ach-org"><b>Surya Nobelia B.</b>, Satria N., Henfri Binugroho E. and Fatahillah T. — Proceedings of the 5th International Conference on Applied Science and Technology on Engineering Science (iCAST-ES), Volume 1, SciTePress, pp. 182–187</div>
+      </div>
+      <div class="ach-date">2022</div>
+    </div>
+  </div>
+
+  <div class="ach-item ach-publication">
+    <div class="ach-head">
+      <div class="ach-title">
+        <a class="ach-link-title" href="https://doi.org/10.5220/0010950100003260" target="_blank" rel="noopener">
+          <b>The Development of Dance Movement in Humanoid Robot Dancing ERISA</b>
+        </a>
+        <div class="ach-org">Satria N., Binugroho E., Chairussy R., Basuki D. and <b>Surya Nobelia B.</b> — Proceedings of the 4th International Conference on Applied Science and Technology on Engineering Science (iCAST-ES), SciTePress, pp. 626–632</div>
+      </div>
+      <div class="ach-date">2021</div>
+    </div>
+  </div>
 
   <!-- ================= -->
   <!-- AWARDS SECTION    -->
@@ -83,11 +118,35 @@ permalink: /achievements/
     </ul>
   </div>
 
+  <!-- ===================== -->
+  <!-- SCHOLARSHIPS SECTION  -->
+  <!-- ===================== -->
+  <h2 class="ach-section">🎓 Scholarships</h2>
+
+  <div class="ach-item ach-scholarship">
+    <div class="ach-head">
+      <div class="ach-title">
+        <b>MEXT Scholarship</b>
+        <div class="ach-org">Japanese Government</div>
+      </div>
+      <div class="ach-date">2024–2026</div>
+    </div>
+  </div>
+
+  <div class="ach-item ach-scholarship">
+    <div class="ach-head">
+      <div class="ach-title">
+        <b>Adaro Scholarship</b>
+        <div class="ach-org">PT. Adaro Energy, Tbk</div>
+      </div>
+      <div class="ach-date">2021–2022</div>
+    </div>
+  </div>
 
   <!-- ===================== -->
-  <!-- ACHIEVEMENTS SECTION  -->
+  <!-- TRAINING SECTION  -->
   <!-- ===================== -->
-  <h2 class="ach-section">⭐ Achievements</h2>
+  <h2 class="ach-section">⭐ Training</h2>
 
   <div class="ach-item ach-achievement">
     <div class="ach-head">
